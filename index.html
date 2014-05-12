@@ -1,0 +1,1293 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Сибирия</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link href="./css/style.css" rel="stylesheet" type="text/css" title="compact">
+	<link href="./css/index.css" rel="stylesheet" type="text/css" title="compact">
+	<link href="./fancybox/fancybox.css" rel="stylesheet" type="text/css" title="compact">
+	<link href="./css/uniform.css" rel="stylesheet" type="text/css" title="compact">
+	<script type="text/javascript" src="./js/jquery.js"></script>
+	<script type="text/javascript" src="./fancybox/fancybox.js"></script>
+	<script type="text/javascript" src="./js/jscrollpane.js"></script>
+	<script type="text/javascript" src="./js/mousewheel.js"></script>
+	<script type="text/javascript" src="./js/onepagescroll.js"></script>
+	<script type="text/javascript" src="./js/raphael.js"></script>
+	<script type="text/javascript" src="./js/slides.js"></script>
+	<script type="text/javascript" src="./js/uislider.js"></script>
+	<script type="text/javascript" src="./js/uniform.js"></script>
+	<script type="text/javascript" src="./js/dynamic.js"></script>
+	<script type="text/javascript">
+		function preload(arrayOfImages) {
+			$(arrayOfImages).each(function(){
+				$('<img>')[0].src = this;
+			});
+		}
+		preload([
+			'./img/bg1.jpg',
+			'./img/bg2.jpg',
+			'./img/bg3.jpg',
+			'./img/bg4.jpg',
+			'./img/bg5.jpg',
+			'./img/bg6.jpg'
+		]);
+		$(document).ready(function() {
+			$('body').css({'visibility': 'hidden'});
+			$('.main').onepage_scroll({
+			   sectionContainer: 'section',
+			   easing: 'ease',
+			   animationTime: 1000,
+			   pagination: false,
+			   updateURL: false,
+			   beforeMove: function(index) {},
+			   afterMove: function(index) {},
+			   loop: false,
+			   keyboard: true,
+			   responsiveFallback: false
+			});
+		});
+		$(window).load(function() {
+			$('body').css({'visibility': 'visible'});
+		});
+	</script>
+</head>
+<body>
+	<div class="main">
+		<section class="b1">
+			<div class="wrapper">
+				<div class="panel">
+					<div>
+						<p class="title">Барнаул 11.03.2014г.</p>
+						<ul class="nav">
+							<li><a href="#">Галерея</a></li>
+							<li><a href="#">Новости</a></li>
+							<li><a href="#">Спонсорство и благотворительность</a></li>
+							<li><a href="#">О компании</a></li>
+							<li><a href="#">Контакты</a></li>
+						</ul>
+						<ul class="social">
+							<li><a href="#"><img src="./img/panel_facebook_icon.png" width="7" height="13" alt=""></a></li>
+							<li><a href="#"><img src="./img/panel_odnoklassniki_icon.png" width="9" height="13" alt=""></a></li>
+							<li><a href="#"><img src="./img/panel_vkontakte_icon.png" width="13" height="7" alt=""></a></li>
+							<li><a href="#"><img src="./img/panel_twitter_icon.png" width="13" height="9" alt=""></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="header">
+					<a href="#"><img src="./img/logo.png" width="170" height="38" class="logo" alt=""></a>
+					<p class="phones">717-000, 717-317</p>
+					<ul class="nav">
+						<li>
+							<a href="#">
+								<img src="./img/header_nav_icon1.png" width="22" height="21" alt="">
+								<span>Каталог<br> недвижимости</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="./img/header_nav_icon2.png" width="21" height="21" alt="">
+								<span>Каталог<br> планировок</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="./img/header_nav_icon3.png" width="22" height="21" alt="">
+								<span>Подбор<br> квартир</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="./img/header_nav_icon4.png" width="20" height="21" alt="">
+								<span>Коммерческая<br> недвижимость</span>
+							</a>
+						</li>
+					</ul>
+					<div class="price">
+						<a href="#">
+							<h5>PDF</h5>
+							<p>Скачать прайс</p>
+						</a>
+					</div>
+				</div>
+				<div class="showmenu">
+					<p>Раскрыть меню</p>
+				</div>
+				<div class="menu active">
+					<ul>
+						<li><a href="#">Акции компании</a></li>
+						<li><a href="#">Проектные декларации<br> и разрешения на строительство</a></li>
+					</ul>
+					<div>
+						<p>Ипотека<br> банков</p>
+						<img src="./img/ipoteka_banner.png" width="125" height="22" alt="">
+					</div>
+				</div>
+				<div class="index buildings">
+					<div class="nav">
+						<span class="prev"></span>
+						<div>
+							<div>
+								<h6>Строящиеся</h6>
+								<div class="element" id="1">
+									<div>
+										<img src="./pic/object1_preview.png" width="44" height="40" class="default" alt="">
+										<img src="./pic/object1_preview_active.png" width="50" height="46" class="active" alt="">
+									</div>
+									<p>ЖК “Аквамарин”</p>
+								</div>
+								<div class="element" id="2">
+									<div>
+										<img src="./pic/object2_preview.png" width="44" height="35" class="default" alt="">
+										<img src="./pic/object2_preview_active.png" width="50" height="39" class="active" alt="">
+									</div>
+									<p>Анатолия, 35а</p>
+								</div>
+								<div class="element" id="3">
+									<div>
+										<img src="./pic/object3_preview.png" width="44" height="34" class="default" alt="">
+										<img src="./pic/object3_preview_active.png" width="50" height="40" class="active" alt="">
+									</div>
+									<p>Кубанский, 19</p>
+								</div>
+								<h6>Завершенные</h6>
+								<div class="element" id="4">
+									<div>
+										<img src="./pic/object4_preview.png" width="44" height="35" class="default" alt="">
+										<img src="./pic/object4_preview_active.png" width="50" height="40" class="active" alt="">
+									</div>
+									<p>Короленко, 70</p>
+								</div>
+								<div class="element" id="5">
+									<div>
+										<img src="./pic/object5_preview.png" width="44" height="35" class="default" alt="">
+										<img src="./pic/object5_preview_active.png" width="50" height="39" class="active" alt="">
+									</div>
+									<p>Никитина, 40</p>
+								</div>
+								<div class="element" id="6">
+									<div>
+										<img src="./pic/object6_preview.png" width="44" height="35" class="default" alt="">
+										<img src="./pic/object6_preview_active.png" width="50" height="40" class="active" alt="">
+									</div>
+									<p>Гоголя, 66</p>
+								</div>
+							</div>
+						</div>
+						<span class="next"></span>
+					</div>
+					<div class="object" id="building1">
+						<div class="gallery">
+							<div>
+								<div class="pictures">
+									<img src="./pic/object1_photo1.png" width="139" height="296" alt="">
+									<img src="./pic/object1_photo2.png" width="139" height="296" alt="">
+									<img src="./pic/object1_photo1.png" width="139" height="296" alt="">
+									<img src="./pic/object1_photo2.png" width="139" height="296" alt="">
+									<img src="./pic/object1_photo1.png" width="139" height="296" alt="">
+									<img src="./pic/object1_photo2.png" width="139" height="296" alt="">
+								</div>
+								<div class="navigation">
+									<div>
+										<span class="prev"></span>
+										<div>
+											<h3>Жилой комплекс «Аквамарин».</h3>
+											<p>Уникальное расположение на берегу Оби.</p>
+										</div>
+										<span class="next"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="information">
+							<h1>Приречная, 1,5,9</h1>
+							<h6>Сдача объекта в марте 2015</h6>
+							<p>Апартаменты различной площади<br> - от 48 до 117 кв. м.</p>
+							<p>Пентхаус, двухуровневые апартаменты - площадью 172 кв м.</p>
+							<ul class="links">
+								<li><a href="text">Информация о доме</a></li>
+								<li><a href="map">Посмотреть на карте</a></li>
+								<li><a href="stages">Этапы строительства</a></li>
+							</ul>
+							<div class="files">
+								<div>
+									<a href="#">
+										<h5>PDF</h5>
+										<p>Динамика<br> цен</p>
+									</a>
+								</div>
+							</div>
+							<button><span>Смотреть планировки</span></button>
+						</div>
+						<div class="modal text">
+							<div>
+								<h2>Информация о доме</h2>
+								<div class="scrollable">
+									<iframe width="490" height="300" src="http://www.youtube.com/embed/exg_OxsaHyY" frameborder="0" allowfullscreen></iframe>
+									<h3>Современные квартиры в живописном исполнении</h3>
+									<p>— Эксперты прогнозируют дефицит в сегменте новостроек. Поэтому если ваши представления об улучшении жилищных условий связаны с покупкой новых квартир — поторопитесь. Шанс предоставляется уникальный — ведь в новом современном комплексе стартовали продажи.</p>
+									<img src="./pic/modal_text.jpg" width="490" height="100" alt="">
+									<h3>Современные квартиры в живописном исполнении</h3>
+									<p>— Эксперты прогнозируют дефицит в сегменте новостроек. Поэтому если ваши представления об улучшении жилищных условий связаны с покупкой новых квартир — поторопитесь. Шанс предоставляется уникальный — ведь в новом современном комплексе стартовали продажи.</p>
+									<img src="./pic/modal_text.jpg" width="490" height="100" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="modal map">
+							<iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.ru/maps?t=m&amp;ie=UTF8&amp;ll=53.331084,83.676338&amp;spn=0.005965,0.016512&amp;z=17&amp;output=embed"></iframe>
+						</div>
+						<div class="modal stages">
+							<div>
+								<h2>Этапы строительства</h2>
+								<div class="scrollable">
+									<div class="photos">
+										<div class="stage1">
+											<div>
+												<img src="./pic/object1_stage1_photo1.jpg" width="410" height="301" alt="">
+												<img src="./pic/object1_stage1_photo2.jpg" width="410" height="301" alt="">
+												<img src="./pic/object1_stage1_photo1.jpg" width="410" height="301" alt="">
+												<img src="./pic/object1_stage1_photo2.jpg" width="410" height="301" alt="">
+												<img src="./pic/object1_stage1_photo1.jpg" width="410" height="301" alt="">
+											</div>
+											<h5>
+												<span class="prev"></span>
+												<strong></strong>
+												<span class="next"></span>
+											</h5>
+											<p>— Эксперты прогнозируют дефицит в сегменте новостроек. Поэтому если ваши представления об улучшении жилищных условий связаны с покупкой новых квартир — поторопитесь. Шанс предоставляется уникальный — ведь в новом современном комплексе стартовали продажи.</p>
+										</div>
+										<div class="stage2">
+											<div>
+												<img src="./pic/object1_stage1_photo2.jpg" width="410" height="301" alt="">
+												<img src="./pic/object1_stage1_photo1.jpg" width="410" height="301" alt="">
+												<img src="./pic/object1_stage1_photo2.jpg" width="410" height="301" alt="">
+												<img src="./pic/object1_stage1_photo1.jpg" width="410" height="301" alt="">
+												<img src="./pic/object1_stage1_photo2.jpg" width="410" height="301" alt="">
+											</div>
+											<h5>
+												<span class="prev"></span>
+												<strong></strong>
+												<span class="next"></span>
+											</h5>
+											<p>Описание этапа Январь 2014</p>
+										</div>
+										<div class="stage3">
+											<div>
+												<img src="./pic/object1_stage1_photo1.jpg" width="410" height="301" alt="">
+												<img src="./pic/object1_stage1_photo2.jpg" width="410" height="301" alt="">
+												<img src="./pic/object1_stage1_photo1.jpg" width="410" height="301" alt="">
+												<img src="./pic/object1_stage1_photo2.jpg" width="410" height="301" alt="">
+												<img src="./pic/object1_stage1_photo1.jpg" width="410" height="301" alt="">
+											</div>
+											<h5>
+												<span class="prev"></span>
+												<strong></strong>
+												<span class="next"></span>
+											</h5>
+											<p>Описание этапа Декабрь 2013</p>
+										</div>
+									</div>
+									<ul>
+										<li><a href="stage1">Февраль 2014</a></li>
+										<li><a href="stage2">Январь 2014</a></li>
+										<li><a href="stage3">Декабрь 2013</a></li>
+										<li><a href="#">Ноябрь 2013</a></li>
+										<li><a href="#">Октябрь 2013</a></li>
+										<li><a href="#">Сентябрь 2013</a></li>
+										<li><a href="#">Август 2013</a></li>
+										<li><a href="#">Июль 2013</a></li>
+										<li><a href="#">Июнь 2013</a></li>
+										<li><a href="#">Май 2013</a></li>
+										<li><a href="#">Апрель 2013</a></li>
+										<li><a href="#">Март 2013</a></li>
+										<li><a href="#">Февраль 2013</a></li>
+										<li><a href="#">Январь 2013</a></li>
+										<li><a href="#">Декабрь 2012</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="prenew">
+					<div>
+						<div class="container">
+							<div>
+								<img src="./pic/prenew.jpg" width="63" height="57" alt="">
+								<h3><a href="#">СК «Сибирия» одна из первых  в Сибирском регионе застраховала  свою гражданскую ответственность!</a></h3>
+								<h6>18.02.2014г.</h6>
+							</div>
+							<div>
+								<img src="./pic/prenew.jpg" width="63" height="57" alt="">
+								<h3><a href="#">Заголовок второй новости</a></h3>
+								<h6>12.04.2014г.</h6>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="clear"></div>
+				<div class="footer">
+					<p class="copy">© 2014 Sibiria</p>
+					<p class="author">Разработано в <a href="http://letsrock.pro" target="_blank">Let’s Rock</a></p>
+				</div>
+			</div>
+		</section>
+		<section class="b2">
+			<div class="wrapper">
+				<div class="panel">
+					<div>
+						<p class="title">Барнаул 11.03.2014г.</p>
+						<ul class="nav">
+							<li><a href="#">Галерея</a></li>
+							<li><a href="#">Новости</a></li>
+							<li><a href="#">Спонсорство и благотворительность</a></li>
+							<li><a href="#">О компании</a></li>
+							<li><a href="#">Контакты</a></li>
+						</ul>
+						<ul class="social">
+							<li><a href="#"><img src="./img/panel_facebook_icon.png" width="7" height="13" alt=""></a></li>
+							<li><a href="#"><img src="./img/panel_odnoklassniki_icon.png" width="9" height="13" alt=""></a></li>
+							<li><a href="#"><img src="./img/panel_vkontakte_icon.png" width="13" height="7" alt=""></a></li>
+							<li><a href="#"><img src="./img/panel_twitter_icon.png" width="13" height="9" alt=""></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="header">
+					<a href="#"><img src="./img/logo.png" width="170" height="38" class="logo" alt=""></a>
+					<p class="phones">717-000, 717-317</p>
+					<ul class="nav">
+						<li>
+							<a href="#">
+								<img src="./img/header_nav_icon1.png" width="22" height="21" alt="">
+								<span>Каталог<br> недвижимости</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="./img/header_nav_icon2.png" width="21" height="21" alt="">
+								<span>Каталог<br> планировок</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="./img/header_nav_icon3.png" width="22" height="21" alt="">
+								<span>Подбор<br> квартир</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="./img/header_nav_icon4.png" width="20" height="21" alt="">
+								<span>Коммерческая<br> недвижимость</span>
+							</a>
+						</li>
+					</ul>
+					<div class="price">
+						<a href="#">
+							<h5>PDF</h5>
+							<p>Скачать прайс</p>
+						</a>
+					</div>
+				</div>
+				<div class="showmenu">
+					<p>Раскрыть меню</p>
+				</div>
+				<div class="menu active">
+					<ul>
+						<li><a href="#">Акции компании</a></li>
+						<li><a href="#">Проектные декларации<br> и разрешения на строительство</a></li>
+					</ul>
+					<div>
+						<p>Ипотека<br> банков</p>
+						<img src="./img/ipoteka_banner.png" width="125" height="22" alt="">
+					</div>
+				</div>
+				<div class="index buildings">
+					<div class="nav">
+						<span class="prev"></span>
+						<div>
+							<div>
+								<h6>Строящиеся</h6>
+								<div class="element" id="1">
+									<div>
+										<img src="./pic/object1_preview.png" width="44" height="40" class="default" alt="">
+										<img src="./pic/object1_preview_active.png" width="50" height="46" class="active" alt="">
+									</div>
+									<p>ЖК “Аквамарин”</p>
+								</div>
+								<div class="element" id="2">
+									<div>
+										<img src="./pic/object2_preview.png" width="44" height="35" class="default" alt="">
+										<img src="./pic/object2_preview_active.png" width="50" height="39" class="active" alt="">
+									</div>
+									<p>Анатолия, 35а</p>
+								</div>
+								<div class="element" id="3">
+									<div>
+										<img src="./pic/object3_preview.png" width="44" height="34" class="default" alt="">
+										<img src="./pic/object3_preview_active.png" width="50" height="40" class="active" alt="">
+									</div>
+									<p>Кубанский, 19</p>
+								</div>
+								<h6>Завершенные</h6>
+								<div class="element" id="4">
+									<div>
+										<img src="./pic/object4_preview.png" width="44" height="35" class="default" alt="">
+										<img src="./pic/object4_preview_active.png" width="50" height="40" class="active" alt="">
+									</div>
+									<p>Короленко, 70</p>
+								</div>
+								<div class="element" id="5">
+									<div>
+										<img src="./pic/object5_preview.png" width="44" height="35" class="default" alt="">
+										<img src="./pic/object5_preview_active.png" width="50" height="39" class="active" alt="">
+									</div>
+									<p>Никитина, 40</p>
+								</div>
+								<div class="element" id="6">
+									<div>
+										<img src="./pic/object6_preview.png" width="44" height="35" class="default" alt="">
+										<img src="./pic/object6_preview_active.png" width="50" height="40" class="active" alt="">
+									</div>
+									<p>Гоголя, 66</p>
+								</div>
+							</div>
+						</div>
+						<span class="next"></span>
+					</div>
+					<div class="object" id="building2">
+						<div class="gallery">
+							<div>
+								<div class="pictures">
+									<img src="./pic/object2_photo1.png" width="277" height="268" alt="">
+									<img src="./pic/object2_photo2.png" width="277" height="268" alt="">
+									<img src="./pic/object2_photo1.png" width="277" height="268" alt="">
+									<img src="./pic/object2_photo2.png" width="277" height="268" alt="">
+									<img src="./pic/object2_photo1.png" width="277" height="268" alt="">
+									<img src="./pic/object2_photo2.png" width="277" height="268" alt="">
+								</div>
+								<div class="navigation">
+									<div>
+										<span class="prev"></span>
+										<div>
+											<h3>Кирпичный жилой дом с объектами общественного назначения.</h3>
+											<p>Современные лифты и подъезды.</p>
+										</div>
+										<span class="next"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="information">
+							<h1>Анатолия, 35</h1>
+							<h6>Сдача объекта в марте 2015</h6>
+							<p>Апартаменты различной площади<br> - от 48 до 117 кв. м.</p>
+							<p>Пентхаус, двухуровневые апартаменты - площадью 172 кв м.</p>
+							<ul class="links">
+								<li><a href="#">Информация о доме</a></li>
+								<li><a href="#">Посмотреть на карте</a></li>
+								<li><a href="#">Этапы строительства</a></li>
+							</ul>
+							<div class="files">
+								<div>
+									<a href="#">
+										<h5>PDF</h5>
+										<p>Динамика<br> цен</p>
+									</a>
+								</div>
+							</div>
+							<button><span>Смотреть планировки</span></button>
+						</div>
+					</div>
+				</div>
+				<div class="prenew">
+					<div>
+						<div class="container">
+							<div>
+								<img src="./pic/prenew.jpg" width="63" height="57" alt="">
+								<h3><a href="#">СК «Сибирия» одна из первых  в Сибирском регионе застраховала  свою гражданскую ответственность!</a></h3>
+								<h6>18.02.2014г.</h6>
+							</div>
+							<div>
+								<img src="./pic/prenew.jpg" width="63" height="57" alt="">
+								<h3><a href="#">Заголовок второй новости</a></h3>
+								<h6>12.04.2014г.</h6>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="clear"></div>
+				<div class="footer">
+					<p class="copy">© 2014 Sibiria</p>
+					<p class="author">Разработано в <a href="http://letsrock.pro" target="_blank">Let’s Rock</a></p>
+				</div>
+				</div>
+		</section>
+		<section class="b3">
+			<div class="wrapper">
+				<div class="panel">
+					<div>
+						<p class="title">Барнаул 11.03.2014г.</p>
+						<ul class="nav">
+							<li><a href="#">Галерея</a></li>
+							<li><a href="#">Новости</a></li>
+							<li><a href="#">Спонсорство и благотворительность</a></li>
+							<li><a href="#">О компании</a></li>
+							<li><a href="#">Контакты</a></li>
+						</ul>
+						<ul class="social">
+							<li><a href="#"><img src="./img/panel_facebook_icon.png" width="7" height="13" alt=""></a></li>
+							<li><a href="#"><img src="./img/panel_odnoklassniki_icon.png" width="9" height="13" alt=""></a></li>
+							<li><a href="#"><img src="./img/panel_vkontakte_icon.png" width="13" height="7" alt=""></a></li>
+							<li><a href="#"><img src="./img/panel_twitter_icon.png" width="13" height="9" alt=""></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="header">
+					<a href="#"><img src="./img/logo.png" width="170" height="38" class="logo" alt=""></a>
+					<p class="phones">717-000, 717-317</p>
+					<ul class="nav">
+						<li>
+							<a href="#">
+								<img src="./img/header_nav_icon1.png" width="22" height="21" alt="">
+								<span>Каталог<br> недвижимости</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="./img/header_nav_icon2.png" width="21" height="21" alt="">
+								<span>Каталог<br> планировок</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="./img/header_nav_icon3.png" width="22" height="21" alt="">
+								<span>Подбор<br> квартир</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="./img/header_nav_icon4.png" width="20" height="21" alt="">
+								<span>Коммерческая<br> недвижимость</span>
+							</a>
+						</li>
+					</ul>
+					<div class="price">
+						<a href="#">
+							<h5>PDF</h5>
+							<p>Скачать прайс</p>
+						</a>
+					</div>
+				</div>
+				<div class="showmenu">
+					<p>Раскрыть меню</p>
+				</div>
+				<div class="menu active">
+					<ul>
+						<li><a href="#">Акции компании</a></li>
+						<li><a href="#">Проектные декларации<br> и разрешения на строительство</a></li>
+					</ul>
+					<div>
+						<p>Ипотека<br> банков</p>
+						<img src="./img/ipoteka_banner.png" width="125" height="22" alt="">
+					</div>
+				</div>
+				<div class="index buildings">
+					<div class="nav">
+						<span class="prev"></span>
+						<div>
+							<div>
+								<h6>Строящиеся</h6>
+								<div class="element" id="1">
+									<div>
+										<img src="./pic/object1_preview.png" width="44" height="40" class="default" alt="">
+										<img src="./pic/object1_preview_active.png" width="50" height="46" class="active" alt="">
+									</div>
+									<p>ЖК “Аквамарин”</p>
+								</div>
+								<div class="element" id="2">
+									<div>
+										<img src="./pic/object2_preview.png" width="44" height="35" class="default" alt="">
+										<img src="./pic/object2_preview_active.png" width="50" height="39" class="active" alt="">
+									</div>
+									<p>Анатолия, 35а</p>
+								</div>
+								<div class="element" id="3">
+									<div>
+										<img src="./pic/object3_preview.png" width="44" height="34" class="default" alt="">
+										<img src="./pic/object3_preview_active.png" width="50" height="40" class="active" alt="">
+									</div>
+									<p>Кубанский, 19</p>
+								</div>
+								<h6>Завершенные</h6>
+								<div class="element" id="4">
+									<div>
+										<img src="./pic/object4_preview.png" width="44" height="35" class="default" alt="">
+										<img src="./pic/object4_preview_active.png" width="50" height="40" class="active" alt="">
+									</div>
+									<p>Короленко, 70</p>
+								</div>
+								<div class="element" id="5">
+									<div>
+										<img src="./pic/object5_preview.png" width="44" height="35" class="default" alt="">
+										<img src="./pic/object5_preview_active.png" width="50" height="39" class="active" alt="">
+									</div>
+									<p>Никитина, 40</p>
+								</div>
+								<div class="element" id="6">
+									<div>
+										<img src="./pic/object6_preview.png" width="44" height="35" class="default" alt="">
+										<img src="./pic/object6_preview_active.png" width="50" height="40" class="active" alt="">
+									</div>
+									<p>Гоголя, 66</p>
+								</div>
+							</div>
+						</div>
+						<span class="next"></span>
+					</div>
+					<div class="object" id="building3">
+						<div class="gallery">
+							<div>
+								<div class="pictures">
+									<img src="./pic/object3_photo1.png" width="219" height="295" alt="">
+									<img src="./pic/object3_photo2.png" width="219" height="295" alt="">
+									<img src="./pic/object3_photo1.png" width="219" height="295" alt="">
+									<img src="./pic/object3_photo2.png" width="219" height="295" alt="">
+									<img src="./pic/object3_photo1.png" width="219" height="295" alt="">
+									<img src="./pic/object3_photo2.png" width="219" height="295" alt="">
+								</div>
+								<div class="navigation">
+									<div>
+										<span class="prev"></span>
+										<div>
+											<h3>Строящийся кирпичный 15-этажный жилой дом.</h3>
+											<p>Новостройка расположена в п. Южный.</p>
+										</div>
+										<span class="next"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="information">
+							<h1>Кубанский, 19</h1>
+							<h6>Сдача объекта в марте 2015</h6>
+							<p>Апартаменты различной площади<br> - от 48 до 117 кв. м.</p>
+							<p>Пентхаус, двухуровневые апартаменты - площадью 172 кв м.</p>
+							<ul class="links">
+								<li><a href="#">Информация о доме</a></li>
+								<li><a href="#">Посмотреть на карте</a></li>
+								<li><a href="#">Этапы строительства</a></li>
+							</ul>
+							<div class="files">
+								<div>
+									<a href="#">
+										<h5>PDF</h5>
+										<p>Динамика<br> цен</p>
+									</a>
+								</div>
+							</div>
+							<button><span>Смотреть планировки</span></button>
+						</div>
+					</div>
+				</div>
+				<div class="prenew">
+					<div>
+						<div class="container">
+							<div>
+								<img src="./pic/prenew.jpg" width="63" height="57" alt="">
+								<h3><a href="#">СК «Сибирия» одна из первых  в Сибирском регионе застраховала  свою гражданскую ответственность!</a></h3>
+								<h6>18.02.2014г.</h6>
+							</div>
+							<div>
+								<img src="./pic/prenew.jpg" width="63" height="57" alt="">
+								<h3><a href="#">Заголовок второй новости</a></h3>
+								<h6>12.04.2014г.</h6>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="clear"></div>
+				<div class="footer">
+					<p class="copy">© 2014 Sibiria</p>
+					<p class="author">Разработано в <a href="http://letsrock.pro" target="_blank">Let’s Rock</a></p>
+				</div>
+			</div>
+		</section>
+		<section class="b4">
+			<div class="wrapper">
+				<div class="panel">
+					<div>
+						<p class="title">Барнаул 11.03.2014г.</p>
+						<ul class="nav">
+							<li><a href="#">Галерея</a></li>
+							<li><a href="#">Новости</a></li>
+							<li><a href="#">Спонсорство и благотворительность</a></li>
+							<li><a href="#">О компании</a></li>
+							<li><a href="#">Контакты</a></li>
+						</ul>
+						<ul class="social">
+							<li><a href="#"><img src="./img/panel_facebook_icon.png" width="7" height="13" alt=""></a></li>
+							<li><a href="#"><img src="./img/panel_odnoklassniki_icon.png" width="9" height="13" alt=""></a></li>
+							<li><a href="#"><img src="./img/panel_vkontakte_icon.png" width="13" height="7" alt=""></a></li>
+							<li><a href="#"><img src="./img/panel_twitter_icon.png" width="13" height="9" alt=""></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="header">
+					<a href="#"><img src="./img/logo.png" width="170" height="38" class="logo" alt=""></a>
+					<p class="phones">717-000, 717-317</p>
+					<ul class="nav">
+						<li>
+							<a href="#">
+								<img src="./img/header_nav_icon1.png" width="22" height="21" alt="">
+								<span>Каталог<br> недвижимости</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="./img/header_nav_icon2.png" width="21" height="21" alt="">
+								<span>Каталог<br> планировок</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="./img/header_nav_icon3.png" width="22" height="21" alt="">
+								<span>Подбор<br> квартир</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="./img/header_nav_icon4.png" width="20" height="21" alt="">
+								<span>Коммерческая<br> недвижимость</span>
+							</a>
+						</li>
+					</ul>
+					<div class="price">
+						<a href="#">
+							<h5>PDF</h5>
+							<p>Скачать прайс</p>
+						</a>
+					</div>
+				</div>
+				<div class="showmenu">
+					<p>Раскрыть меню</p>
+				</div>
+				<div class="menu active">
+					<ul>
+						<li><a href="#">Акции компании</a></li>
+						<li><a href="#">Проектные декларации<br> и разрешения на строительство</a></li>
+					</ul>
+					<div>
+						<p>Ипотека<br> банков</p>
+						<img src="./img/ipoteka_banner.png" width="125" height="22" alt="">
+					</div>
+				</div>
+				<div class="index buildings">
+					<div class="nav">
+						<span class="prev"></span>
+						<div>
+							<div>
+								<h6>Строящиеся</h6>
+								<div class="element" id="1">
+									<div>
+										<img src="./pic/object1_preview.png" width="44" height="40" class="default" alt="">
+										<img src="./pic/object1_preview_active.png" width="50" height="46" class="active" alt="">
+									</div>
+									<p>ЖК “Аквамарин”</p>
+								</div>
+								<div class="element" id="2">
+									<div>
+										<img src="./pic/object2_preview.png" width="44" height="35" class="default" alt="">
+										<img src="./pic/object2_preview_active.png" width="50" height="39" class="active" alt="">
+									</div>
+									<p>Анатолия, 35а</p>
+								</div>
+								<div class="element" id="3">
+									<div>
+										<img src="./pic/object3_preview.png" width="44" height="34" class="default" alt="">
+										<img src="./pic/object3_preview_active.png" width="50" height="40" class="active" alt="">
+									</div>
+									<p>Кубанский, 19</p>
+								</div>
+								<h6>Завершенные</h6>
+								<div class="element" id="4">
+									<div>
+										<img src="./pic/object4_preview.png" width="44" height="35" class="default" alt="">
+										<img src="./pic/object4_preview_active.png" width="50" height="40" class="active" alt="">
+									</div>
+									<p>Короленко, 70</p>
+								</div>
+								<div class="element" id="5">
+									<div>
+										<img src="./pic/object5_preview.png" width="44" height="35" class="default" alt="">
+										<img src="./pic/object5_preview_active.png" width="50" height="39" class="active" alt="">
+									</div>
+									<p>Никитина, 40</p>
+								</div>
+								<div class="element" id="6">
+									<div>
+										<img src="./pic/object6_preview.png" width="44" height="35" class="default" alt="">
+										<img src="./pic/object6_preview_active.png" width="50" height="40" class="active" alt="">
+									</div>
+									<p>Гоголя, 66</p>
+								</div>
+							</div>
+						</div>
+						<span class="next"></span>
+					</div>
+					<div class="object" id="building4">
+						<div class="gallery">
+							<div>
+								<div class="pictures">
+									<img src="./pic/object4_photo1.png" width="282" height="236" alt="">
+									<img src="./pic/object4_photo2.png" width="282" height="236" alt="">
+									<img src="./pic/object4_photo1.png" width="282" height="236" alt="">
+									<img src="./pic/object4_photo2.png" width="282" height="236" alt="">
+									<img src="./pic/object4_photo1.png" width="282" height="236" alt="">
+									<img src="./pic/object4_photo2.png" width="282" height="236" alt="">
+								</div>
+								<div class="navigation">
+									<div>
+										<span class="prev"></span>
+										<div>
+											<h3>Строящийся кирпичный 15-этажный жилой дом.</h3>
+											<p>Новостройка расположена в п. Южный.</p>
+										</div>
+										<span class="next"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="information">
+							<h1>Короленко, 70</h1>
+							<h6>Сдача объекта в марте 2015</h6>
+							<p>Апартаменты различной площади<br> - от 48 до 117 кв. м.</p>
+							<p>Пентхаус, двухуровневые апартаменты - площадью 172 кв м.</p>
+							<ul class="links">
+								<li><a href="#">Информация о доме</a></li>
+								<li><a href="#">Посмотреть на карте</a></li>
+								<li><a href="#">Этапы строительства</a></li>
+							</ul>
+							<div class="files">
+								<div>
+									<a href="#">
+										<h5>PDF</h5>
+										<p>Динамика<br> цен</p>
+									</a>
+								</div>
+							</div>
+							<button><span>Смотреть планировки</span></button>
+						</div>
+					</div>
+				</div>
+				<div class="prenew">
+					<div>
+						<div class="container">
+							<div>
+								<img src="./pic/prenew.jpg" width="63" height="57" alt="">
+								<h3><a href="#">СК «Сибирия» одна из первых  в Сибирском регионе застраховала  свою гражданскую ответственность!</a></h3>
+								<h6>18.02.2014г.</h6>
+							</div>
+							<div>
+								<img src="./pic/prenew.jpg" width="63" height="57" alt="">
+								<h3><a href="#">Заголовок второй новости</a></h3>
+								<h6>12.04.2014г.</h6>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="clear"></div>
+				<div class="footer">
+					<p class="copy">© 2014 Sibiria</p>
+					<p class="author">Разработано в <a href="http://letsrock.pro" target="_blank">Let’s Rock</a></p>
+				</div>
+			</div>
+		</section>
+		<section class="b5">
+			<div class="wrapper">
+				<div class="panel">
+					<div>
+						<p class="title">Барнаул 11.03.2014г.</p>
+						<ul class="nav">
+							<li><a href="#">Галерея</a></li>
+							<li><a href="#">Новости</a></li>
+							<li><a href="#">Спонсорство и благотворительность</a></li>
+							<li><a href="#">О компании</a></li>
+							<li><a href="#">Контакты</a></li>
+						</ul>
+						<ul class="social">
+							<li><a href="#"><img src="./img/panel_facebook_icon.png" width="7" height="13" alt=""></a></li>
+							<li><a href="#"><img src="./img/panel_odnoklassniki_icon.png" width="9" height="13" alt=""></a></li>
+							<li><a href="#"><img src="./img/panel_vkontakte_icon.png" width="13" height="7" alt=""></a></li>
+							<li><a href="#"><img src="./img/panel_twitter_icon.png" width="13" height="9" alt=""></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="header">
+					<a href="#"><img src="./img/logo.png" width="170" height="38" class="logo" alt=""></a>
+					<p class="phones">717-000, 717-317</p>
+					<ul class="nav">
+						<li>
+							<a href="#">
+								<img src="./img/header_nav_icon1.png" width="22" height="21" alt="">
+								<span>Каталог<br> недвижимости</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="./img/header_nav_icon2.png" width="21" height="21" alt="">
+								<span>Каталог<br> планировок</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="./img/header_nav_icon3.png" width="22" height="21" alt="">
+								<span>Подбор<br> квартир</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="./img/header_nav_icon4.png" width="20" height="21" alt="">
+								<span>Коммерческая<br> недвижимость</span>
+							</a>
+						</li>
+					</ul>
+					<div class="price">
+						<a href="#">
+							<h5>PDF</h5>
+							<p>Скачать прайс</p>
+						</a>
+					</div>
+				</div>
+				<div class="showmenu">
+					<p>Раскрыть меню</p>
+				</div>
+				<div class="menu active">
+					<ul>
+						<li><a href="#">Акции компании</a></li>
+						<li><a href="#">Проектные декларации<br> и разрешения на строительство</a></li>
+					</ul>
+					<div>
+						<p>Ипотека<br> банков</p>
+						<img src="./img/ipoteka_banner.png" width="125" height="22" alt="">
+					</div>
+				</div>
+				<div class="index buildings">
+					<div class="nav">
+						<span class="prev"></span>
+						<div>
+							<div>
+								<h6>Строящиеся</h6>
+								<div class="element" id="1">
+									<div>
+										<img src="./pic/object1_preview.png" width="44" height="40" class="default" alt="">
+										<img src="./pic/object1_preview_active.png" width="50" height="46" class="active" alt="">
+									</div>
+									<p>ЖК “Аквамарин”</p>
+								</div>
+								<div class="element" id="2">
+									<div>
+										<img src="./pic/object2_preview.png" width="44" height="35" class="default" alt="">
+										<img src="./pic/object2_preview_active.png" width="50" height="39" class="active" alt="">
+									</div>
+									<p>Анатолия, 35а</p>
+								</div>
+								<div class="element" id="3">
+									<div>
+										<img src="./pic/object3_preview.png" width="44" height="34" class="default" alt="">
+										<img src="./pic/object3_preview_active.png" width="50" height="40" class="active" alt="">
+									</div>
+									<p>Кубанский, 19</p>
+								</div>
+								<h6>Завершенные</h6>
+								<div class="element" id="4">
+									<div>
+										<img src="./pic/object4_preview.png" width="44" height="35" class="default" alt="">
+										<img src="./pic/object4_preview_active.png" width="50" height="40" class="active" alt="">
+									</div>
+									<p>Короленко, 70</p>
+								</div>
+								<div class="element" id="5">
+									<div>
+										<img src="./pic/object5_preview.png" width="44" height="35" class="default" alt="">
+										<img src="./pic/object5_preview_active.png" width="50" height="39" class="active" alt="">
+									</div>
+									<p>Никитина, 40</p>
+								</div>
+								<div class="element" id="6">
+									<div>
+										<img src="./pic/object6_preview.png" width="44" height="35" class="default" alt="">
+										<img src="./pic/object6_preview_active.png" width="50" height="40" class="active" alt="">
+									</div>
+									<p>Гоголя, 66</p>
+								</div>
+							</div>
+						</div>
+						<span class="next"></span>
+					</div>
+					<div class="object" id="building5">
+						<div class="gallery">
+							<div>
+								<div class="pictures">
+									<img src="./pic/object5_photo1.png" width="165" height="292" alt="">
+									<img src="./pic/object5_photo2.png" width="165" height="292" alt="">
+									<img src="./pic/object5_photo1.png" width="165" height="292" alt="">
+									<img src="./pic/object5_photo2.png" width="165" height="292" alt="">
+									<img src="./pic/object5_photo1.png" width="165" height="292" alt="">
+									<img src="./pic/object5_photo2.png" width="165" height="292" alt="">
+								</div>
+								<div class="navigation">
+									<div>
+										<span class="prev"></span>
+										<div>
+											<h3>Строящийся 15-ти этажный  кирпичный жилой дом.</h3>
+											<p>Свободная планировка квартир.</p>
+										</div>
+										<span class="next"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="information">
+							<h1>Никитина, 40</h1>
+							<h6>Сдача объекта в марте 2015</h6>
+							<p>Апартаменты различной площади<br> - от 48 до 117 кв. м.</p>
+							<p>Пентхаус, двухуровневые апартаменты - площадью 172 кв м.</p>
+							<ul class="links">
+								<li><a href="#">Информация о доме</a></li>
+								<li><a href="#">Посмотреть на карте</a></li>
+								<li><a href="#">Этапы строительства</a></li>
+							</ul>
+							<div class="files">
+								<div>
+									<a href="#">
+										<h5>PDF</h5>
+										<p>Динамика<br> цен</p>
+									</a>
+								</div>
+							</div>
+							<button><span>Смотреть планировки</span></button>
+						</div>
+					</div>
+				</div>
+				<div class="prenew">
+					<div>
+						<div class="container">
+							<div>
+								<img src="./pic/prenew.jpg" width="63" height="57" alt="">
+								<h3><a href="#">СК «Сибирия» одна из первых  в Сибирском регионе застраховала  свою гражданскую ответственность!</a></h3>
+								<h6>18.02.2014г.</h6>
+							</div>
+							<div>
+								<img src="./pic/prenew.jpg" width="63" height="57" alt="">
+								<h3><a href="#">Заголовок второй новости</a></h3>
+								<h6>12.04.2014г.</h6>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="clear"></div>
+				<div class="footer">
+					<p class="copy">© 2014 Sibiria</p>
+					<p class="author">Разработано в <a href="http://letsrock.pro" target="_blank">Let’s Rock</a></p>
+				</div>
+			</div>
+		</section>
+		<section class="b6">
+			<div class="wrapper">
+				<div class="panel">
+					<div>
+						<p class="title">Барнаул 11.03.2014г.</p>
+						<ul class="nav">
+							<li><a href="#">Галерея</a></li>
+							<li><a href="#">Новости</a></li>
+							<li><a href="#">Спонсорство и благотворительность</a></li>
+							<li><a href="#">О компании</a></li>
+							<li><a href="#">Контакты</a></li>
+						</ul>
+						<ul class="social">
+							<li><a href="#"><img src="./img/panel_facebook_icon.png" width="7" height="13" alt=""></a></li>
+							<li><a href="#"><img src="./img/panel_odnoklassniki_icon.png" width="9" height="13" alt=""></a></li>
+							<li><a href="#"><img src="./img/panel_vkontakte_icon.png" width="13" height="7" alt=""></a></li>
+							<li><a href="#"><img src="./img/panel_twitter_icon.png" width="13" height="9" alt=""></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="header">
+					<a href="#"><img src="./img/logo.png" width="170" height="38" class="logo" alt=""></a>
+					<p class="phones">717-000, 717-317</p>
+					<ul class="nav">
+						<li>
+							<a href="#">
+								<img src="./img/header_nav_icon1.png" width="22" height="21" alt="">
+								<span>Каталог<br> недвижимости</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="./img/header_nav_icon2.png" width="21" height="21" alt="">
+								<span>Каталог<br> планировок</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="./img/header_nav_icon3.png" width="22" height="21" alt="">
+								<span>Подбор<br> квартир</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="./img/header_nav_icon4.png" width="20" height="21" alt="">
+								<span>Коммерческая<br> недвижимость</span>
+							</a>
+						</li>
+					</ul>
+					<div class="price">
+						<a href="#">
+							<h5>PDF</h5>
+							<p>Скачать прайс</p>
+						</a>
+					</div>
+				</div>
+				<div class="showmenu">
+					<p>Раскрыть меню</p>
+				</div>
+				<div class="menu active">
+					<ul>
+						<li><a href="#">Акции компании</a></li>
+						<li><a href="#">Проектные декларации<br> и разрешения на строительство</a></li>
+					</ul>
+					<div>
+						<p>Ипотека<br> банков</p>
+						<img src="./img/ipoteka_banner.png" width="125" height="22" alt="">
+					</div>
+				</div>
+				<div class="index buildings">
+					<div class="nav">
+						<span class="prev"></span>
+						<div>
+							<div>
+								<h6>Строящиеся</h6>
+								<div class="element" id="1">
+									<div>
+										<img src="./pic/object1_preview.png" width="44" height="40" class="default" alt="">
+										<img src="./pic/object1_preview_active.png" width="50" height="46" class="active" alt="">
+									</div>
+									<p>ЖК “Аквамарин”</p>
+								</div>
+								<div class="element" id="2">
+									<div>
+										<img src="./pic/object2_preview.png" width="44" height="35" class="default" alt="">
+										<img src="./pic/object2_preview_active.png" width="50" height="39" class="active" alt="">
+									</div>
+									<p>Анатолия, 35а</p>
+								</div>
+								<div class="element" id="3">
+									<div>
+										<img src="./pic/object3_preview.png" width="44" height="34" class="default" alt="">
+										<img src="./pic/object3_preview_active.png" width="50" height="40" class="active" alt="">
+									</div>
+									<p>Кубанский, 19</p>
+								</div>
+								<h6>Завершенные</h6>
+								<div class="element" id="4">
+									<div>
+										<img src="./pic/object4_preview.png" width="44" height="35" class="default" alt="">
+										<img src="./pic/object4_preview_active.png" width="50" height="40" class="active" alt="">
+									</div>
+									<p>Короленко, 70</p>
+								</div>
+								<div class="element" id="5">
+									<div>
+										<img src="./pic/object5_preview.png" width="44" height="35" class="default" alt="">
+										<img src="./pic/object5_preview_active.png" width="50" height="39" class="active" alt="">
+									</div>
+									<p>Никитина, 40</p>
+								</div>
+								<div class="element" id="6">
+									<div>
+										<img src="./pic/object6_preview.png" width="44" height="35" class="default" alt="">
+										<img src="./pic/object6_preview_active.png" width="50" height="40" class="active" alt="">
+									</div>
+									<p>Гоголя, 66</p>
+								</div>
+							</div>
+						</div>
+						<span class="next"></span>
+					</div>
+					<div class="object" id="building6">
+						<div class="gallery">
+							<div>
+								<div class="pictures">
+									<img src="./pic/object6_photo1.png" width="282" height="260" alt="">
+									<img src="./pic/object6_photo2.png" width="282" height="260" alt="">
+									<img src="./pic/object6_photo1.png" width="282" height="260" alt="">
+									<img src="./pic/object6_photo2.png" width="282" height="260" alt="">
+									<img src="./pic/object6_photo1.png" width="282" height="260" alt="">
+									<img src="./pic/object6_photo2.png" width="282" height="260" alt="">
+								</div>
+								<div class="navigation">
+									<div>
+										<span class="prev"></span>
+										<div>
+											<h3>Строящийся кирпичный жилой дом.</h3>
+											<p>Подземная автостоянка.</p>
+										</div>
+										<span class="next"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="information">
+							<h1>Гоголя, 66</h1>
+							<h6>Сдача объекта в марте 2015</h6>
+							<p>Апартаменты различной площади<br> - от 48 до 117 кв. м.</p>
+							<p>Пентхаус, двухуровневые апартаменты - площадью 172 кв м.</p>
+							<ul class="links">
+								<li><a href="#">Информация о доме</a></li>
+								<li><a href="#">Посмотреть на карте</a></li>
+								<li><a href="#">Этапы строительства</a></li>
+							</ul>
+							<div class="files">
+								<div>
+									<a href="#">
+										<h5>PDF</h5>
+										<p>Динамика<br> цен</p>
+									</a>
+								</div>
+							</div>
+							<button><span>Смотреть планировки</span></button>
+						</div>
+					</div>
+				</div>
+				<div class="prenew">
+					<div>
+						<div class="container">
+							<div>
+								<img src="./pic/prenew.jpg" width="63" height="57" alt="">
+								<h3><a href="#">СК «Сибирия» одна из первых  в Сибирском регионе застраховала  свою гражданскую ответственность!</a></h3>
+								<h6>18.02.2014г.</h6>
+							</div>
+							<div>
+								<img src="./pic/prenew.jpg" width="63" height="57" alt="">
+								<h3><a href="#">Заголовок второй новости</a></h3>
+								<h6>12.04.2014г.</h6>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="clear"></div>
+				<div class="footer">
+					<p class="copy">© 2014 Sibiria</p>
+					<p class="author">Разработано в <a href="http://letsrock.pro" target="_blank">Let’s Rock</a></p>
+				</div>
+			</div>
+		</section>
+	</div>
+	<div class="fade"></div>
+	<!--<div class="bg bg1"></div>
+	<div class="bg bg2"></div>
+	<div class="bg bg3"></div>
+	<div class="bg bg4"></div>
+	<div class="bg bg5"></div>
+	<div class="bg bg6"></div>--!>
+</body>
+</html>
