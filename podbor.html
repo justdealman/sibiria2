@@ -16,18 +16,51 @@
 	<script type="text/javascript" src="./js/uniform.js"></script>
 	<script type="text/javascript" src="./js/dynamic.js"></script>
 	<script type="text/javascript">
-		$(document).ready(function() {
+		function filter() {
 			var ft = $('.filter').offset().top;
 			var fh = $('.filter').height()+36;
-			$(window).scroll(function () {
+			function position() {
 				if ( $(window).scrollTop() > ft ) {
-					$('.filter').addClass('fixed');
+					$('.filter, table.list').addClass('fixed');
+					$('table.list thead').css({'top': fh+'px'});
+					$('table.list').css({'margin-top': '47px'});
 					$('.content').css({'padding-top': fh+'px'});
-				} else {
-					$('.filter').removeClass('fixed');
+				}
+				else {
+					$('.filter, table.list').removeClass('fixed');
+					$('table.list thead').css({'top': '0'});
+					$('table.list').css({'margin-top': '0'});
 					$('.content').css({'padding-top': '0'});
 				}
+				
+			}
+			$('.filter .more').bind('click', function() {
+				$(this).parents('.filter').addClass('active');
+				fh = $('.filter').height()+36;
+				position();
+				return false;
 			});
+			$('.filter .less').bind('click', function() {
+				$(this).parents('.filter').removeClass('active');
+				fh = $('.filter').height()+36;
+				position();
+				return false;
+			});
+			$(window).scroll(function () {
+				position();
+				$('table.list tbody').each(function() {
+					console.log($(this).offset().top);
+					if ( $(window).scrollTop()+fh > ($(this).offset().top) ) {
+						$(this).css({'visibility': 'hidden'});
+					}
+					else {
+						$(this).css({'visibility': 'visible'});
+					}
+				});
+			});
+		}
+		$(document).ready(function() {
+			filter();
 		});
 	</script>
 </head>
@@ -102,7 +135,7 @@
 		</div>
 		<div class="content">
 			<div class="filter">
-				<h2>Подбор квартир</h2>
+				<h1><span>Подбор квартир</span></h1>
 				<ul class="options">
 					<li>
 						<p>Стоимость</p>
@@ -126,10 +159,10 @@
 						<div class="range floor"></div>
 					</li>
 				</ul>
-				<button>Показать</button>
-				<button>Очистить</button>
+				<button class="show">Найти</button>
+				<button class="clean">Сброс</button>
 				
-				<p class="more">Показать</p>
+				<p class="more">Условия</p>
 				<p class="less">Скрыть</p>
 				
 				<div class="methods">
@@ -165,6 +198,8 @@
 						<td>60 000 руб.</td>
 						<td>780 800 руб.</td>
 					</tr>
+				</tbody>
+				<tbody>
 					<tr>
 						<td>С. Республик, 39а</td>
 						<td>1</td>
@@ -173,6 +208,38 @@
 						<td>60 000 руб.</td>
 						<td>850 000 руб.</td>
 					</tr>
+				</tbody>
+				<tbody>
+					<tr>
+						<td>Короленко, 70</td>
+						<td>1</td>
+						<td>1</td>
+						<td>21.27 м<sup>2</sup></td>
+						<td>60 000 руб.</td>
+						<td>6 850 000 руб.</td>
+					</tr>
+				</tbody>
+				<tbody>
+					<tr>
+						<td>Приречная, 1</td>
+						<td>1</td>
+						<td>1</td>
+						<td>19.52 м<sup>2</sup></td>
+						<td>60 000 руб.</td>
+						<td>18 780 800 руб.</td>
+					</tr>
+				</tbody>
+				<tbody>
+					<tr>
+						<td>С. Республик, 39а</td>
+						<td>1</td>
+						<td>1</td>
+						<td>21.52 м<sup>2</sup></td>
+						<td>60 000 руб.</td>
+						<td>850 000 руб.</td>
+					</tr>
+				</tbody>
+				<tbody>
 					<tr>
 						<td>Короленко, 70</td>
 						<td>1</td>
@@ -181,6 +248,8 @@
 						<td>60 000 руб.</td>
 						<td>850 000 руб.</td>
 					</tr>
+				</tbody>
+				<tbody>
 					<tr>
 						<td>Приречная, 1</td>
 						<td>1</td>
@@ -189,6 +258,8 @@
 						<td>60 000 руб.</td>
 						<td>780 800 руб.</td>
 					</tr>
+				</tbody>
+				<tbody>
 					<tr>
 						<td>С. Республик, 39а</td>
 						<td>1</td>
@@ -197,6 +268,8 @@
 						<td>60 000 руб.</td>
 						<td>850 000 руб.</td>
 					</tr>
+				</tbody>
+				<tbody>
 					<tr>
 						<td>Короленко, 70</td>
 						<td>1</td>
@@ -205,6 +278,8 @@
 						<td>60 000 руб.</td>
 						<td>850 000 руб.</td>
 					</tr>
+				</tbody>
+				<tbody>
 					<tr>
 						<td>Приречная, 1</td>
 						<td>1</td>
@@ -213,6 +288,8 @@
 						<td>60 000 руб.</td>
 						<td>780 800 руб.</td>
 					</tr>
+				</tbody>
+				<tbody>
 					<tr>
 						<td>С. Республик, 39а</td>
 						<td>1</td>
@@ -221,6 +298,8 @@
 						<td>60 000 руб.</td>
 						<td>850 000 руб.</td>
 					</tr>
+				</tbody>
+				<tbody>
 					<tr>
 						<td>Короленко, 70</td>
 						<td>1</td>
@@ -229,6 +308,8 @@
 						<td>60 000 руб.</td>
 						<td>850 000 руб.</td>
 					</tr>
+				</tbody>
+				<tbody>
 					<tr>
 						<td>Приречная, 1</td>
 						<td>1</td>
@@ -237,6 +318,8 @@
 						<td>60 000 руб.</td>
 						<td>780 800 руб.</td>
 					</tr>
+				</tbody>
+				<tbody>
 					<tr>
 						<td>С. Республик, 39а</td>
 						<td>1</td>
@@ -245,6 +328,8 @@
 						<td>60 000 руб.</td>
 						<td>850 000 руб.</td>
 					</tr>
+				</tbody>
+				<tbody>
 					<tr>
 						<td>Короленко, 70</td>
 						<td>1</td>
@@ -253,6 +338,8 @@
 						<td>60 000 руб.</td>
 						<td>850 000 руб.</td>
 					</tr>
+				</tbody>
+				<tbody>
 					<tr>
 						<td>Приречная, 1</td>
 						<td>1</td>
@@ -261,6 +348,8 @@
 						<td>60 000 руб.</td>
 						<td>780 800 руб.</td>
 					</tr>
+				</tbody>
+				<tbody>
 					<tr>
 						<td>С. Республик, 39а</td>
 						<td>1</td>
@@ -269,6 +358,8 @@
 						<td>60 000 руб.</td>
 						<td>850 000 руб.</td>
 					</tr>
+				</tbody>
+				<tbody>
 					<tr>
 						<td>Короленко, 70</td>
 						<td>1</td>
@@ -277,6 +368,8 @@
 						<td>60 000 руб.</td>
 						<td>850 000 руб.</td>
 					</tr>
+				</tbody>
+				<tbody>
 					<tr>
 						<td>Приречная, 1</td>
 						<td>1</td>
@@ -285,6 +378,8 @@
 						<td>60 000 руб.</td>
 						<td>780 800 руб.</td>
 					</tr>
+				</tbody>
+				<tbody>
 					<tr>
 						<td>С. Республик, 39а</td>
 						<td>1</td>
@@ -293,6 +388,8 @@
 						<td>60 000 руб.</td>
 						<td>850 000 руб.</td>
 					</tr>
+				</tbody>
+				<tbody>
 					<tr>
 						<td>Короленко, 70</td>
 						<td>1</td>
@@ -301,6 +398,8 @@
 						<td>60 000 руб.</td>
 						<td>850 000 руб.</td>
 					</tr>
+				</tbody>
+				<tbody>
 					<tr>
 						<td>Приречная, 1</td>
 						<td>1</td>
@@ -308,238 +407,6 @@
 						<td>19.52 м<sup>2</sup></td>
 						<td>60 000 руб.</td>
 						<td>780 800 руб.</td>
-					</tr>
-					<tr>
-						<td>С. Республик, 39а</td>
-						<td>1</td>
-						<td>1</td>
-						<td>21.52 м<sup>2</sup></td>
-						<td>60 000 руб.</td>
-						<td>850 000 руб.</td>
-					</tr>
-					<tr>
-						<td>Короленко, 70</td>
-						<td>1</td>
-						<td>1</td>
-						<td>21.27 м<sup>2</sup></td>
-						<td>60 000 руб.</td>
-						<td>850 000 руб.</td>
-					</tr>
-					<tr>
-						<td>Приречная, 1</td>
-						<td>1</td>
-						<td>1</td>
-						<td>19.52 м<sup>2</sup></td>
-						<td>60 000 руб.</td>
-						<td>780 800 руб.</td>
-					</tr>
-					<tr>
-						<td>С. Республик, 39а</td>
-						<td>1</td>
-						<td>1</td>
-						<td>21.52 м<sup>2</sup></td>
-						<td>60 000 руб.</td>
-						<td>850 000 руб.</td>
-					</tr>
-					<tr>
-						<td>Короленко, 70</td>
-						<td>1</td>
-						<td>1</td>
-						<td>21.27 м<sup>2</sup></td>
-						<td>60 000 руб.</td>
-						<td>850 000 руб.</td>
-					</tr>
-					<tr>
-						<td>Приречная, 1</td>
-						<td>1</td>
-						<td>1</td>
-						<td>19.52 м<sup>2</sup></td>
-						<td>60 000 руб.</td>
-						<td>780 800 руб.</td>
-					</tr>
-					<tr>
-						<td>С. Республик, 39а</td>
-						<td>1</td>
-						<td>1</td>
-						<td>21.52 м<sup>2</sup></td>
-						<td>60 000 руб.</td>
-						<td>850 000 руб.</td>
-					</tr>
-					<tr>
-						<td>Короленко, 70</td>
-						<td>1</td>
-						<td>1</td>
-						<td>21.27 м<sup>2</sup></td>
-						<td>60 000 руб.</td>
-						<td>850 000 руб.</td>
-					</tr>
-					<tr>
-						<td>Приречная, 1</td>
-						<td>1</td>
-						<td>1</td>
-						<td>19.52 м<sup>2</sup></td>
-						<td>60 000 руб.</td>
-						<td>780 800 руб.</td>
-					</tr>
-					<tr>
-						<td>С. Республик, 39а</td>
-						<td>1</td>
-						<td>1</td>
-						<td>21.52 м<sup>2</sup></td>
-						<td>60 000 руб.</td>
-						<td>850 000 руб.</td>
-					</tr>
-					<tr>
-						<td>Короленко, 70</td>
-						<td>1</td>
-						<td>1</td>
-						<td>21.27 м<sup>2</sup></td>
-						<td>60 000 руб.</td>
-						<td>850 000 руб.</td>
-					</tr>
-					<tr>
-						<td>Приречная, 1</td>
-						<td>1</td>
-						<td>1</td>
-						<td>19.52 м<sup>2</sup></td>
-						<td>60 000 руб.</td>
-						<td>780 800 руб.</td>
-					</tr>
-					<tr>
-						<td>С. Республик, 39а</td>
-						<td>1</td>
-						<td>1</td>
-						<td>21.52 м<sup>2</sup></td>
-						<td>60 000 руб.</td>
-						<td>850 000 руб.</td>
-					</tr>
-					<tr>
-						<td>Короленко, 70</td>
-						<td>1</td>
-						<td>1</td>
-						<td>21.27 м<sup>2</sup></td>
-						<td>60 000 руб.</td>
-						<td>850 000 руб.</td>
-					</tr>
-					<tr>
-						<td>Приречная, 1</td>
-						<td>1</td>
-						<td>1</td>
-						<td>19.52 м<sup>2</sup></td>
-						<td>60 000 руб.</td>
-						<td>780 800 руб.</td>
-					</tr>
-					<tr>
-						<td>С. Республик, 39а</td>
-						<td>1</td>
-						<td>1</td>
-						<td>21.52 м<sup>2</sup></td>
-						<td>60 000 руб.</td>
-						<td>850 000 руб.</td>
-					</tr>
-					<tr>
-						<td>Короленко, 70</td>
-						<td>1</td>
-						<td>1</td>
-						<td>21.27 м<sup>2</sup></td>
-						<td>60 000 руб.</td>
-						<td>850 000 руб.</td>
-					</tr>
-					<tr>
-						<td>Приречная, 1</td>
-						<td>1</td>
-						<td>1</td>
-						<td>19.52 м<sup>2</sup></td>
-						<td>60 000 руб.</td>
-						<td>780 800 руб.</td>
-					</tr>
-					<tr>
-						<td>С. Республик, 39а</td>
-						<td>1</td>
-						<td>1</td>
-						<td>21.52 м<sup>2</sup></td>
-						<td>60 000 руб.</td>
-						<td>850 000 руб.</td>
-					</tr>
-					<tr>
-						<td>Короленко, 70</td>
-						<td>1</td>
-						<td>1</td>
-						<td>21.27 м<sup>2</sup></td>
-						<td>60 000 руб.</td>
-						<td>850 000 руб.</td>
-					</tr>
-					<tr>
-						<td>Приречная, 1</td>
-						<td>1</td>
-						<td>1</td>
-						<td>19.52 м<sup>2</sup></td>
-						<td>60 000 руб.</td>
-						<td>780 800 руб.</td>
-					</tr>
-					<tr>
-						<td>С. Республик, 39а</td>
-						<td>1</td>
-						<td>1</td>
-						<td>21.52 м<sup>2</sup></td>
-						<td>60 000 руб.</td>
-						<td>850 000 руб.</td>
-					</tr>
-					<tr>
-						<td>Короленко, 70</td>
-						<td>1</td>
-						<td>1</td>
-						<td>21.27 м<sup>2</sup></td>
-						<td>60 000 руб.</td>
-						<td>850 000 руб.</td>
-					</tr>
-					<tr>
-						<td>Приречная, 1</td>
-						<td>1</td>
-						<td>1</td>
-						<td>19.52 м<sup>2</sup></td>
-						<td>60 000 руб.</td>
-						<td>780 800 руб.</td>
-					</tr>
-					<tr>
-						<td>С. Республик, 39а</td>
-						<td>1</td>
-						<td>1</td>
-						<td>21.52 м<sup>2</sup></td>
-						<td>60 000 руб.</td>
-						<td>850 000 руб.</td>
-					</tr>
-					<tr>
-						<td>Короленко, 70</td>
-						<td>1</td>
-						<td>1</td>
-						<td>21.27 м<sup>2</sup></td>
-						<td>60 000 руб.</td>
-						<td>850 000 руб.</td>
-					</tr>
-					<tr>
-						<td>Приречная, 1</td>
-						<td>1</td>
-						<td>1</td>
-						<td>19.52 м<sup>2</sup></td>
-						<td>60 000 руб.</td>
-						<td>780 800 руб.</td>
-					</tr>
-					<tr>
-						<td>С. Республик, 39а</td>
-						<td>1</td>
-						<td>1</td>
-						<td>21.52 м<sup>2</sup></td>
-						<td>60 000 руб.</td>
-						<td>850 000 руб.</td>
-					</tr>
-					<tr>
-						<td>Короленко, 70</td>
-						<td>1</td>
-						<td>1</td>
-						<td>21.27 м<sup>2</sup></td>
-						<td>60 000 руб.</td>
-						<td>850 000 руб.</td>
 					</tr>
 				</tbody>
 			</table>

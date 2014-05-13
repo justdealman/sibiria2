@@ -57,10 +57,7 @@
 		}
 	});
 });
-
-
 function zoom() {
-
 	var scrollobjectheight;
 	var zoom;
 
@@ -141,36 +138,17 @@ function zoom() {
 		if ( aa == 1 ) {
 			ip = 0;
 		}
-
 		api.scrollToY(-ip, true);
-
 	});
 	
 }
-
 $(window).resize(function() {
-
 	zoom();
-
 });
 $(window).load(function() {
-
 	zoom();
-	
 });
 $(document).ready(function() {
-
-	$('.filter .more').bind('click', function() {
-		$(this).parents('.filter').addClass('active');
-		return false;
-	});
-
-	$('.filter .less').bind('click', function() {
-		$(this).parents('.filter').removeClass('active');
-		return false;
-	});
-
-	
 	$('.index.buildings .nav .element').bind('click', function() {
 		var target = $(this).attr('id');
 		$('.main').moveTo(target);
@@ -212,208 +190,16 @@ $(document).ready(function() {
 		return false;
 	});
 	if ( $('.index.buildings').length || $('.index.floors').length ) {
-	
-
 		var xxx = 1;
-		/*var yyy = $('.index .nav .element').size();
-	
-		$(window).bind('scroll', function() {
-			setTimeout(function () {
-				var st = $('.index').offset().top;
-				var zzz = ( $(window).height() - $('.index').height() ) / 2;
-				var min = $(document).height() - $(window).height();
-
-				if ( zzz < 60 ) {
-					zzz = 30;
-				}
-				if ( min < 30 ) {
-					st = 0;
-					zzz = -1;
-				}
-				
-				//console.log(min);
-				if ( $(window).scrollTop() == 0  ) {
-					$('html, body').animate({ scrollTop: st-zzz }, 250);
-					if (xxx < (yyy+1) && xxx > 1) {
-						xxx = xxx - 1;
-						//console.log('Скролл вверх ID='+xxx);
-					}
-					else {
-						xxx = yyy;
-					}
-
-					//console.log('Скролл вниз ID='+xxx);
-					
-					$('.index .nav .element:nth-of-type('+xxx+')').click();
-					
-				}
-				if ( $(window).scrollTop() + $(window).height() == $(document).height() ) {
-					$('html, body').animate({ scrollTop: st-zzz }, 250);
-					if (xxx < yyy) {
-						xxx = xxx + 1;
-					}
-					else {
-						xxx = 1;
-					}
-					
-					//console.log('Скролл вниз ID='+xxx);
-					$('.index .nav .element:nth-of-type('+xxx+')').click();
-				}	
-				
-			}, 500);
-		});
-		
-		
-		
-		if  ( $('.index.buildings').length ) {
-			var ol = $(window).width() - $('.index .object').offset().left;
-		}
-		if  ( $('.index.floors').length ) {
-			var ol = $(window).width() - $('.index .floor').offset().left;
-		}
-		var ww = $(window).width();*/
-		
-
-		
 		var first = 1;
-
-		//$('.index .floor').hide();
 		
 		$('section .index.buildings .nav').each(function() {
 			var ind = $(this).parents('section').index()+1;
 			$(this).find('.element:nth-of-type('+ind+')').addClass('active');
-			
-
-			/*var ip = $('.jspPane').height() - $('#'+ind).position().top - $('.jspScrollable').height();
-			if ( ind < 2 ) {
-				ip = 0;
-			}
-						
-			//console.log(xxx+', '+ip);
-			api.scrollToY(-ip, true);
-						
-			first = 0;*/
-			
-		});
-		
-		/*$('.index .object, .index .floor').css({'left': ww+'-1000px'});
-		$('.index.buildings .nav .element').bind('click', function() {
-			var id = $(this).attr('id');
-			
-			if ( id != xxx || first != 0 ) {
-			
-			
-			
-			var ooo = $('.index.buildings .nav .element.active').attr('id');
-
-			if ( id != ooo) {
-			
-				if ( id > ooo ) {
-					var dh = $(document).height();
-				}
-				else {
-					var dh = - $(document).height();
-				}
-				
-				var current = $(this);
-				//current.addClass('active').siblings().removeClass('active');
-				//var speed = 500;
-					
-				$('.modal').fadeOut(150);
-				$('.wrapper').animate({'top': dh+'px', 'margin-bottom': -dh+'px', 'opacity': '0'}, speed, function() {
-					$('.wrapper').css({'top': -dh+'px', 'margin-bottom': dh+'px'});
-					$('.index .object').fadeOut(0);		
-					$('.index .object#building'+id).fadeIn(0);
-					$('.wrapper').animate({'top': '0', 'margin-bottom': '0', 'opacity': '1'}, speed);
-					$('.bg').stop(true, true).fadeOut(speed);
-					$('.bg.bg'+id).stop(true, true).fadeIn(speed);
-					xxx = $('.index .object#building'+id).index();
-						
-					var ip = $('.jspPane').height() - $('#'+xxx).position().top - $('.jspScrollable').height();
-					if ( xxx == 1 ) {
-						ip = 0;
-					}
-						
-					//console.log(xxx+', '+ip);
-					api.scrollToY(-ip, true);
-						
-					first = 0;
-						
-				});
-				
-			}
-			}
-			
-			return false;
-		}).filter(':first').click();*/
-		
-		
-		/*$('.index.floors .nav .element').bind('click', function() {
-			var id = $(this).attr('id');
-
-			if ( id != xxx || first != 0 ) {
-			
-				var current = $(this);
-					
-				$('.index.floors').animate({'left': ww+'px'}, 500, function() {
-					$('.index').css({'left': '-1000px'});
-					$('.index .floor').fadeOut(0);		
-					$('.index .floor#building'+id).fadeIn(0);
-					$('.index').animate({'left': '0'}, 500);
-					current.addClass('active').siblings().removeClass('active');
-					$('.bg').stop(true, true).fadeOut(500);
-					$('.bg.bg'+id).stop(true, true).fadeIn(500);
-					xxx = $('.index .floor#building'+id).index();
-						
-					var ip = $('.jspPane').height() - $('#'+xxx).position().top - $('.jspScrollable').height();
-					if ( xxx == 1 ) {
-						ip = 0;
-					}
-
-					//console.log(xxx+', '+ip);
-					api.scrollToY(-ip, true);
-
-					first = 0;
-						
-				});
-			}
-			return false;
-		}).filter(':first').click();*/
-		
-		
-		
-		/*$('.index.floors .nav .element').bind('click', function() {
-			var id = $(this).attr('id');
-			$('.index .floor').hide();
-			$('.index .floor#building'+id).fadeIn(500);
-			$(this).addClass('active').siblings().removeClass('active');
-			$('.bg').stop(true, true).fadeOut(500);
-			$('.bg.bg'+id).stop(true, true).fadeIn(500);
-			return false;
-		}).filter(':first').click();*/
-		
-		
+		});	
 	}
 	
-	
 	if ( $('.index').length ) {
-	
-
-
-/*		$('.index .object').hide();
-		$('.index.buildings .nav .element').bind('click', function() {
-			var id = $(this).attr('id');
-			$('.index .object').animate({'left': ol+'px'}, {speed: 500}, {queue:false});
-			$('.index .object').fadeOut(0);		
-			$('.index .object#building'+id).fadeIn(0);
-			$('.index .object#building'+id).animate({'left': '0'}, {speed: 500}, {queue:false});
-			$(this).addClass('active').siblings().removeClass('active');
-			$('.bg').stop(true, true).fadeOut(500);
-			$('.bg.bg'+id).stop(true, true).fadeIn(500);
-			xxx = $('.index .object#building'+id).index();
-			return false;
-		}).filter(':first').click();
-*/
 		$('.index.buildings .object').each(function() {
 			$(this).find('.links li a').bind('click', function() {
 				var modalheight = $('.index').height();
@@ -422,14 +208,9 @@ $(document).ready(function() {
 				var target = $(this).attr('href');
 
 				if ( target == 'map' ) {
-					//$(this).parents('.object').find('ymaps').height(modalheight);
 					$(this).parents('.object').find('.modal.map iframe').height(modalheight-20);
-
-					//$(this).parents('.object').find('.modal.map script').attr('src', newurl);
 				}
 				$(this).parents('.object').find('.modal.'+target).fadeIn(150);
-//ASDASD		
-				
 				$('body').on('wheel.modal mousewheel.modal', function () {
 					return false;
 				});
@@ -503,7 +284,6 @@ $(document).ready(function() {
 		}).filter(':first').click();
 	});
 	
-	//PPPPPPPPPPP
 	$('.floor .tooltip').append('<span class="arrow"></span>');
 	$('.floor .tooltip').append('<span class="close">x</span>');
 	$('.prenew > div').slides({
@@ -515,7 +295,7 @@ $(document).ready(function() {
 		play: 5000,
 		pause: 2500
 	});
-	$('.content > h1').each(function() {
+	$('.content > h1, .filter h1').each(function() {
 		$(this).append('<em class="left"></em><em class="right"></em>')
 		var h1 = (960-($(this).children('span').width()+18))/2;
 		$(this).find('em.left, em.right').css({'width': h1+'px'});
@@ -686,17 +466,7 @@ $(document).ready(function() {
 		$('.showmenu').show();
 		return false;
 	});
-	
-	$('.index.photogallery .nav .element').bind('click', function() {
-		var id = $(this).attr('id');
-		$('.index .buildphoto').hide();
-		$('.index .buildphoto#gallery'+id).fadeIn(500);
-		$(this).addClass('active').siblings().removeClass('active');
-		$('.bg').stop(true, true).fadeOut(500);
-		$('.bg.bg'+id).stop(true, true).fadeIn(500);
-		return false;
-	}).filter(':first').click();
-	
+
 	$('.index .buildphoto').each(function() {
 		var buildphotos = $(this).children('div');
 		$(this).children('ul').children('li').children('a').click(function () {
@@ -707,18 +477,22 @@ $(document).ready(function() {
 			$(this).parent().addClass('active');
 			return false;
 		}).filter(':first').click();
-	
 	});
+	
+	$('.commercialscheme > div').each(function() {
+		var commercial = $(this).children('div');
+		$(this).children('ul').children('li').children('a').click(function () {
+			commercial.hide();
+			var target = $(this).attr('href');
+			commercial.filter('.'+target).stop(true, true).fadeIn(150);
+			$(this).parent().siblings().removeClass('active');
+			$(this).parent().addClass('active');
+			return false;
+		}).filter(':first').click();
+	});
+	
 	$('.buildphoto > div a').fancybox();
-	/*$('.commercial li').hover(
-		function() {
-			var id = $(this).index()+1;
-			$('.bg').css({'background': 'url("./img/bg'+id+'.jpg") no-repeat center center'});
-		},
-		function() {
-			$('.bg').css({'background': 'url("./img/bg1.jpg") no-repeat center center'});
-		}
-	);*/	
+	
 	$('html').click(function() {
 		$('.modal').hide();
 		$('body').off('wheel.modal mousewheel.modal');
@@ -736,7 +510,6 @@ $(document).ready(function() {
 			return false;
 		}).filter(':first').click();
 	});
-
 
 	var building1_floor1_paths = {
 		apartment1: {
@@ -768,8 +541,6 @@ $(document).ready(function() {
 			path: 'M 335 236 C 335 237.7 334.3 238 331 238 L 327 238 L 327 250 L 327 262 L 343.3 262.2 L 359.5 262.5 L 359.8 274.2 C 360 281.8 359.7 286 359 286 C 358.4 286 358 282 358 275.5 L 358 265 L 342.5 265 L 327 265 L 327 290 L 327 315 L 342.5 315 L 358 315 L 358 305 C 358 299 358.4 295 359 295 C 359.6 295 360 299.5 360 306.5 L 360 318 L 343.5 318 L 327 318 L 327 360 L 327 402 L 343.1 402 C 351.9 402 362.2 401.5 366.1 400.9 L 373 399.7 L 373 382.1 L 373 364.5 L 407.3 364.3 C 436.8 364.1 442.5 363.8 448.5 362.2 L 455.5 360.4 L 455.8 342.2 C 456 324.8 456.1 324 458 324 C 459.9 324 460 324.7 460 339 C 460 348.9 460.4 354 461.1 354 C 464 354 471 349.7 473.1 346.6 C 474.4 344.6 476.1 343 476.8 343 C 477.5 343 478.3 342.2 478.6 341.2 C 480.5 335.5 481.3 334.2 482.6 334.7 C 483.4 335 484 334.8 484.1 334.4 C 484.1 333.9 484.3 332.3 484.4 330.8 C 484.5 329.3 485.4 327.2 486.4 326.1 C 487.5 324.9 488 323.7 487.7 323.4 C 487.4 323 487.8 321.1 488.5 319.1 C 489.3 317.1 490.2 312.3 490.4 308.5 C 490.6 304.6 491.1 300.6 491.5 299.6 C 492.1 298.3 491.9 297.5 491.2 297.2 C 490.5 297 490 296 490 294.9 C 490 293.1 489.1 293 475 293 L 460 293 L 460 300.5 C 460 307.3 459.8 308 458 308 C 456.2 308 456 307.3 456 300.5 L 456 293 L 433.5 293 L 411 293 L 411 265 L 411 237 L 382 237 C 356.9 237 353 236.8 353 235.5 C 353 234.3 351.3 234 344 234 C 335.7 234 335 234.1 335 236Z'
 		}
 	}
-	
-
 
 	var building1_floor2_paths = {
 		apartment1: {
@@ -793,25 +564,20 @@ $(document).ready(function() {
 			path: 'M 259 231.5 C 259 232.7 257.2 233 249 233 L 239 233 L 239 243 C 239 251.2 238.7 253 237.5 253 C 236.3 253 236 251.2 236 243 L 236 233 L 222.5 233 L 209 233 L 209 260 L 209 287 L 222.5 287 L 236 287 L 236 275 C 236 265 236.3 263 237.5 263 C 238.8 263 239 265.2 239 276.5 L 239 290 L 231.5 290 C 227.2 290 224 290.4 224 291 C 224 291.6 220.8 292 216.5 292 L 209 292 L 209 328 L 209 364 L 244 364 L 279 364 L 279 366.5 L 279 369 L 244 369 L 209 369 L 209 378.5 L 209 388 L 213 388 C 215.9 388 217 388.4 217 389.5 C 217 390.3 217.7 391 218.5 391 C 219.3 391 220 390.3 220 389.5 C 220 388.4 221.2 388 224.5 388 C 227.8 388 229 388.4 229 389.5 C 229 390.3 229.7 391 230.5 391 C 231.3 391 232 390.3 232 389.5 C 232 386.8 239.7 387.6 243.4 390.7 C 245.1 392.1 246.4 393.8 246.2 394.3 C 246 394.9 246.2 396 246.5 396.8 C 246.9 397.9 247.3 398 248.5 397 C 250.6 395.2 256 399.7 255.3 402.6 C 255 404 255.4 405 256.4 405.3 C 257.3 405.7 258 405.5 258 405 C 258 403.2 260.4 404 263.1 406.6 L 265.8 409.2 L 269.2 406.7 C 271.6 404.8 273.3 404.3 275 404.7 C 277 405.2 277.2 405 276.7 403.1 C 276.3 401.5 276.9 400.4 279.1 398.7 C 280.8 397.5 283.1 396.5 284.3 396.5 C 285.8 396.5 286.4 396 286.2 394.8 C 285.8 392 292.1 388 296.8 388 C 299.9 388 301 388.4 301 389.5 C 301 390.3 301.7 391 302.5 391 C 303.3 391 304 390.3 304 389.5 C 304 388.4 305.2 388 308.5 388 C 311.8 388 313 388.4 313 389.5 C 313 390.3 313.7 391 314.5 391 C 315.3 391 316 390.3 316 389.5 C 316 388.4 317.1 388 320 388 L 324 388 L 324 378.5 L 324 369 L 308.5 369 L 293 369 L 293 366.5 L 293 364 L 308.5 364 L 324 364 L 324 298.5 L 324 233 L 299 233 C 277.4 233 274 232.8 274 231.5 C 274 230.3 272.5 230 266.5 230 C 260.5 230 259 230.3 259 231.5Z'
 		}
 	}
-	
-	
-	$('.floor > div > div').each(function() {
-	
-		var cover = $(this).find('.cover');
 
+	$('.floor > div > div').each(function() {
+		var cover = $(this).find('.cover');
 		var w = cover.width(); 
 		var h = cover.height(); 
 		var src = cover.attr('src');
 		cover.hide();
 		
 		$(this).css({'background-image': 'url('+src+')'});
-
 		$(this).width(w);
 		$(this).height(h);
 
 		var ooo = $(this).attr('id');
-		//console.log(ooo);
-		
+
 		var r = Raphael(ooo, w, h), attributes = {
 			fill: '#ffffff',
 			opacity: '0',
@@ -824,9 +590,6 @@ $(document).ready(function() {
 			var obj = r.path(eval(ooo)[apartment].path);
 			obj.attr(attributes);
 			arr[obj.id] = apartment;
-			
-			//
-			
 			obj.hover(function(){
 				this.stop(true, true).animate({
 					fill: '#ffffff',
@@ -840,14 +603,9 @@ $(document).ready(function() {
 				}, 250);
 				this.attr({'cursor':'default'});
 			}).click(function(){
-				//var point = this.getBBox(0);
 				var currentapartment = arr[this.id];
-				//alert(currentapartment);
 				$('#'+ooo).children('div').fadeOut(150);
-				
 				var bbox = this.getBBox();
-				//alert([(bbox.width/2)+bbox.x, (bbox.height/2)+bbox.y]);
-				
 				$('#'+ooo).find('.'+currentapartment).css({'left': (bbox.width/2)+bbox.x+'px', 'top': (bbox.height/2)+bbox.y+'px'});
 				$('#'+ooo).find('.'+currentapartment).stop(true, true).fadeIn(150);
 				$('#'+ooo).find('.'+currentapartment+' .close').bind('click', function() {
@@ -857,7 +615,5 @@ $(document).ready(function() {
 				return false;
 			});
 		}
-
-	});
-		
+	});	
 });

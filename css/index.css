@@ -29,3 +29,6 @@ body, .main, html {
 .onepage-pagination {
 	display:none;
 }
+.wrapper {
+	min-height:0 !important;
+}
