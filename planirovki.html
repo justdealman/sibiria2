@@ -16,6 +16,7 @@
 	<script type="text/javascript" src="./js/slides.js"></script>
 	<script type="text/javascript" src="./js/uislider.js"></script>
 	<script type="text/javascript" src="./js/uniform.js"></script>
+	<script type="text/javascript" src="./js/maps.js"></script>
 	<script type="text/javascript" src="./js/dynamic.js"></script>
 	<script type="text/javascript">
 		function preload(arrayOfImages) {
@@ -137,39 +138,39 @@
 								</div>
 								<div class="element" id="2">
 									<div>
+										<img src="./pic/object2_preview.png" width="44" height="35" class="default" alt="">
+										<img src="./pic/object2_preview_active.png" width="50" height="39" class="active" alt="">
+									</div>
+									<p>Анатолия, 35а</p>
+								</div>
+								<div class="element" id="3">
+									<div>
 										<img src="./pic/object3_preview.png" width="44" height="34" class="default" alt="">
 										<img src="./pic/object3_preview_active.png" width="50" height="40" class="active" alt="">
 									</div>
 									<p>Кубанский, 19</p>
 								</div>
-								<div class="element" id="3">
-									<div>
-										<img src="./pic/object5_preview.png" width="44" height="35" class="default" alt="">
-										<img src="./pic/object5_preview_active.png" width="50" height="39" class="active" alt="">
-									</div>
-									<p>Никитина, 40</p>
-								</div>
+								<h6>Завершенные</h6>
 								<div class="element" id="4">
-									<div>
-										<img src="./pic/object6_preview.png" width="44" height="35" class="default" alt="">
-										<img src="./pic/object6_preview_active.png" width="50" height="40" class="active" alt="">
-									</div>
-									<p>Гоголя, 66</p>
-								</div>
-								<div class="element" id="5">
 									<div>
 										<img src="./pic/object4_preview.png" width="44" height="35" class="default" alt="">
 										<img src="./pic/object4_preview_active.png" width="50" height="40" class="active" alt="">
 									</div>
 									<p>Короленко, 70</p>
 								</div>
-								<h6>Завершенные</h6>
+								<div class="element" id="5">
+									<div>
+										<img src="./pic/object5_preview.png" width="44" height="35" class="default" alt="">
+										<img src="./pic/object5_preview_active.png" width="50" height="39" class="active" alt="">
+									</div>
+									<p>Никитина, 40</p>
+								</div>
 								<div class="element" id="6">
 									<div>
-										<img src="./pic/object2_preview.png" width="44" height="35" class="default" alt="">
-										<img src="./pic/object2_preview_active.png" width="50" height="39" class="active" alt="">
+										<img src="./pic/object6_preview.png" width="44" height="35" class="default" alt="">
+										<img src="./pic/object6_preview_active.png" width="50" height="40" class="active" alt="">
 									</div>
-									<p>Анатолия, 35а</p>
+									<p>Гоголя, 66</p>
 								</div>
 							</div>
 						</div>
@@ -178,18 +179,12 @@
 					<div class="object floor" id="building1">
 						<h1><span>Планировки ЖК «Аквамарин»</span></h1>
 						<ul>
-							<li class="active"><a href="level1">2 - 6 этаж</a></li>
-							<li><a href="level2">7 - 10 этаж</a></li>
-							<li><a href="level3">11 - 15 этаж</a></li>
-							<li><a href="level4">16 - 17 этаж</a></li>
-							<li><a href="level5">18 - 20 этаж</a></li>
-							<li><a href="level6">21 этаж</a></li>
-							<li><a href="level7">22 этаж</a></li>
-							<li><a href="level8">23 этаж</a></li>
+							<li class="active"><a href="level1">1</a></li>
+							<li><a href="level2">2</a></li>
 						</ul>
 						<div class="level1">
-							<div id="building1_floor1_paths">
-								<img src="./cover/building1_floor1_map.png" width="534" height="413" class="cover" alt="">
+							<div id="building_1_1">
+								<img src="./cover/building_1_1.png" width="534" height="413" class="cover" alt="">
 								<div class="tooltip apartment1">
 									<p><span><em>Этаж</em></span> 2-6 1</p>
 									<p><span><em>Количество комнат</em></span> 2</p>
@@ -242,8 +237,8 @@
 							</div>
 						</div>
 						<div class="level2">
-							<div id="building1_floor2_paths">
-								<img src="./cover/building1_floor2_map.png" width="533" height="412" class="cover" alt="">
+							<div id="building_1_2">
+								<img src="./cover/building_1_2.png" width="533" height="412" class="cover" alt="">
 								<div class="tooltip apartment1">
 									<p><span><em>Этаж</em></span> 7-10</p>
 									<p><span><em>Количество комнат</em></span> 2</p>
@@ -251,67 +246,7 @@
 									<p><span><em>Стоимость квартиры</em></span> 2 780 800<strong>p</strong></p>
 									<h6><a href="#">Интерьер</a></h6>
 								</div>
-								<div class="tooltip apartment2">
-									<p><span><em>Этаж</em></span> 7-10</p>
-									<p><span><em>Количество комнат</em></span> 2</p>
-									<p><span><em>Общая площадь</em></span> 100.52 м<sup>2</sup></p>
-									<p><span><em>Стоимость квартиры</em></span> 2 780 800<strong>p</strong></p>
-									<h6><a href="#">Интерьер</a></h6>
-								</div>
-								<div class="tooltip apartment3">
-									<p><span><em>Этаж</em></span> 7-10</p>
-									<p><span><em>Количество комнат</em></span> 2</p>
-									<p><span><em>Общая площадь</em></span> 100.52 м<sup>2</sup></p>
-									<p><span><em>Стоимость квартиры</em></span> 2 780 800<strong>p</strong></p>
-									<h6><a href="#">Интерьер</a></h6>
-								</div>
-								<div class="tooltip apartment4">
-									<p><span><em>Этаж</em></span> 7-10</p>
-									<p><span><em>Количество комнат</em></span> 2</p>
-									<p><span><em>Общая площадь</em></span> 100.52 м<sup>2</sup></p>
-									<p><span><em>Стоимость квартиры</em></span> 2 780 800<strong>p</strong></p>
-									<h6><a href="#">Интерьер</a></h6>
-								</div>
-								<div class="tooltip apartment5">
-									<p><span><em>Этаж</em></span> 7-10</p>
-									<p><span><em>Количество комнат</em></span> 2</p>
-									<p><span><em>Общая площадь</em></span> 100.52 м<sup>2</sup></p>
-									<p><span><em>Стоимость квартиры</em></span> 2 780 800<strong>p</strong></p>
-									<h6><a href="#">Интерьер</a></h6>
-								</div>
-								<div class="tooltip apartment6">
-									<p><span><em>Этаж</em></span> 7-10</p>
-									<p><span><em>Количество комнат</em></span> 2</p>
-									<p><span><em>Общая площадь</em></span> 100.52 м<sup>2</sup></p>
-									<p><span><em>Стоимость квартиры</em></span> 2 780 800<strong>p</strong></p>
-									<h6><a href="#">Интерьер</a></h6>
-								</div>
-								<div class="tooltip apartment7">
-									<p><span><em>Этаж</em></span> 7-10</p>
-									<p><span><em>Количество комнат</em></span> 2</p>
-									<p><span><em>Общая площадь</em></span> 100.52 м<sup>2</sup></p>
-									<p><span><em>Стоимость квартиры</em></span> 2 780 800<strong>p</strong></p>
-									<h6><a href="#">Интерьер</a></h6>
-								</div>
 							</div>
-						</div>
-						<div class="level3">
-							<h5>11 - 15 этаж</h5>
-						</div>
-						<div class="level4">
-							<h5>16 - 17 этаж</h5>
-						</div>
-						<div class="level5">
-							<h5>18 - 20 этаж</h5>
-						</div>
-						<div class="level6">
-							<h5>21 этаж</h5>
-						</div>
-						<div class="level7">
-							<h5>22 этаж</h5>
-						</div>
-						<div class="level8">
-							<h5>23 этаж</h5>
 						</div>
 					</div>
 				</div>
@@ -406,46 +341,126 @@
 								</div>
 								<div class="element" id="2">
 									<div>
+										<img src="./pic/object2_preview.png" width="44" height="35" class="default" alt="">
+										<img src="./pic/object2_preview_active.png" width="50" height="39" class="active" alt="">
+									</div>
+									<p>Анатолия, 35а</p>
+								</div>
+								<div class="element" id="3">
+									<div>
 										<img src="./pic/object3_preview.png" width="44" height="34" class="default" alt="">
 										<img src="./pic/object3_preview_active.png" width="50" height="40" class="active" alt="">
 									</div>
 									<p>Кубанский, 19</p>
 								</div>
-								<div class="element" id="3">
-									<div>
-										<img src="./pic/object5_preview.png" width="44" height="35" class="default" alt="">
-										<img src="./pic/object5_preview_active.png" width="50" height="39" class="active" alt="">
-									</div>
-									<p>Никитина, 40</p>
-								</div>
+								<h6>Завершенные</h6>
 								<div class="element" id="4">
-									<div>
-										<img src="./pic/object6_preview.png" width="44" height="35" class="default" alt="">
-										<img src="./pic/object6_preview_active.png" width="50" height="40" class="active" alt="">
-									</div>
-									<p>Гоголя, 66</p>
-								</div>
-								<div class="element" id="5">
 									<div>
 										<img src="./pic/object4_preview.png" width="44" height="35" class="default" alt="">
 										<img src="./pic/object4_preview_active.png" width="50" height="40" class="active" alt="">
 									</div>
 									<p>Короленко, 70</p>
 								</div>
-								<h6>Завершенные</h6>
+								<div class="element" id="5">
+									<div>
+										<img src="./pic/object5_preview.png" width="44" height="35" class="default" alt="">
+										<img src="./pic/object5_preview_active.png" width="50" height="39" class="active" alt="">
+									</div>
+									<p>Никитина, 40</p>
+								</div>
 								<div class="element" id="6">
 									<div>
-										<img src="./pic/object2_preview.png" width="44" height="35" class="default" alt="">
-										<img src="./pic/object2_preview_active.png" width="50" height="39" class="active" alt="">
+										<img src="./pic/object6_preview.png" width="44" height="35" class="default" alt="">
+										<img src="./pic/object6_preview_active.png" width="50" height="40" class="active" alt="">
 									</div>
-									<p>Анатолия, 35а</p>
+									<p>Гоголя, 66</p>
 								</div>
 							</div>
 						</div>
 						<span class="next"></span>
 					</div>
 					<div class="object floor" id="building2">
-						<h1><span>Планировки 2</span></h1>
+						<h1><span>Анатолия, 35а</span></h1>
+						<ul>
+							<li class="active"><a href="level1">1</a></li>
+							<li><a href="level2">2</a></li>
+							<li><a href="level3">3</a></li>
+							<li><a href="level4">4</a></li>
+							<li><a href="level5">5</a></li>
+							<li><a href="level6">6</a></li>
+						</ul>
+						<div class="level1">
+							<div id="building_2_1">
+								<img src="./cover/building_2_1.png" width="534" height="413" class="cover" alt="">
+								<div class="tooltip apartment1">
+									<p><span><em>Этаж</em></span> 7-10</p>
+									<p><span><em>Количество комнат</em></span> 2</p>
+									<p><span><em>Общая площадь</em></span> 100.52 м<sup>2</sup></p>
+									<p><span><em>Стоимость квартиры</em></span> 2 780 800<strong>p</strong></p>
+									<h6><a href="#">Интерьер</a></h6>
+								</div>
+							</div>
+						</div>
+						<div class="level2">
+							<div id="building_2_2">
+								<img src="./cover/building_2_2.png" width="534" height="413" class="cover" alt="">
+								<div class="tooltip apartment1">
+									<p><span><em>Этаж</em></span> 7-10</p>
+									<p><span><em>Количество комнат</em></span> 2</p>
+									<p><span><em>Общая площадь</em></span> 100.52 м<sup>2</sup></p>
+									<p><span><em>Стоимость квартиры</em></span> 2 780 800<strong>p</strong></p>
+									<h6><a href="#">Интерьер</a></h6>
+								</div>
+							</div>
+						</div>
+						<div class="level3">
+							<div id="building_2_3">
+								<img src="./cover/building_2_3.png" width="534" height="413" class="cover" alt="">
+								<div class="tooltip apartment1">
+									<p><span><em>Этаж</em></span> 7-10</p>
+									<p><span><em>Количество комнат</em></span> 2</p>
+									<p><span><em>Общая площадь</em></span> 100.52 м<sup>2</sup></p>
+									<p><span><em>Стоимость квартиры</em></span> 2 780 800<strong>p</strong></p>
+									<h6><a href="#">Интерьер</a></h6>
+								</div>
+							</div>
+						</div>
+						<div class="level4">
+							<div id="building_2_4">
+								<img src="./cover/building_2_4.png" width="534" height="413" class="cover" alt="">
+								<div class="tooltip apartment1">
+									<p><span><em>Этаж</em></span> 7-10</p>
+									<p><span><em>Количество комнат</em></span> 2</p>
+									<p><span><em>Общая площадь</em></span> 100.52 м<sup>2</sup></p>
+									<p><span><em>Стоимость квартиры</em></span> 2 780 800<strong>p</strong></p>
+									<h6><a href="#">Интерьер</a></h6>
+								</div>
+							</div>
+						</div>
+						<div class="level5">
+							<div id="building_2_5">
+								<img src="./cover/building_2_5.png" width="610" height="413" class="cover" alt="">
+								<div class="tooltip apartment1">
+									<p><span><em>Этаж</em></span> 7-10</p>
+									<p><span><em>Количество комнат</em></span> 2</p>
+									<p><span><em>Общая площадь</em></span> 100.52 м<sup>2</sup></p>
+									<p><span><em>Стоимость квартиры</em></span> 2 780 800<strong>p</strong></p>
+									<h6><a href="#">Интерьер</a></h6>
+								</div>
+							</div>
+						</div>
+						<div class="level6">
+							<div id="building_2_6">
+								<img src="./cover/building_2_6.png" width="534" height="413" class="cover" alt="">
+								<div class="tooltip apartment1">
+									<p><span><em>Этаж</em></span> 7-10</p>
+									<p><span><em>Количество комнат</em></span> 2</p>
+									<p><span><em>Общая площадь</em></span> 100.52 м<sup>2</sup></p>
+									<p><span><em>Стоимость квартиры</em></span> 2 780 800<strong>p</strong></p>
+									<h6><a href="#">Интерьер</a></h6>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 				<div class="clear"></div>
@@ -453,7 +468,7 @@
 					<p class="copy">© 2014 Sibiria</p>
 					<p class="author">Разработано в <a href="http://letsrock.pro" target="_blank">Let’s Rock</a></p>
 				</div>
-			</div>
+				</div>
 		</section>
 		<section class="b3">
 			<div class="wrapper">
@@ -539,46 +554,74 @@
 								</div>
 								<div class="element" id="2">
 									<div>
+										<img src="./pic/object2_preview.png" width="44" height="35" class="default" alt="">
+										<img src="./pic/object2_preview_active.png" width="50" height="39" class="active" alt="">
+									</div>
+									<p>Анатолия, 35а</p>
+								</div>
+								<div class="element" id="3">
+									<div>
 										<img src="./pic/object3_preview.png" width="44" height="34" class="default" alt="">
 										<img src="./pic/object3_preview_active.png" width="50" height="40" class="active" alt="">
 									</div>
 									<p>Кубанский, 19</p>
 								</div>
-								<div class="element" id="3">
-									<div>
-										<img src="./pic/object5_preview.png" width="44" height="35" class="default" alt="">
-										<img src="./pic/object5_preview_active.png" width="50" height="39" class="active" alt="">
-									</div>
-									<p>Никитина, 40</p>
-								</div>
+								<h6>Завершенные</h6>
 								<div class="element" id="4">
-									<div>
-										<img src="./pic/object6_preview.png" width="44" height="35" class="default" alt="">
-										<img src="./pic/object6_preview_active.png" width="50" height="40" class="active" alt="">
-									</div>
-									<p>Гоголя, 66</p>
-								</div>
-								<div class="element" id="5">
 									<div>
 										<img src="./pic/object4_preview.png" width="44" height="35" class="default" alt="">
 										<img src="./pic/object4_preview_active.png" width="50" height="40" class="active" alt="">
 									</div>
 									<p>Короленко, 70</p>
 								</div>
-								<h6>Завершенные</h6>
+								<div class="element" id="5">
+									<div>
+										<img src="./pic/object5_preview.png" width="44" height="35" class="default" alt="">
+										<img src="./pic/object5_preview_active.png" width="50" height="39" class="active" alt="">
+									</div>
+									<p>Никитина, 40</p>
+								</div>
 								<div class="element" id="6">
 									<div>
-										<img src="./pic/object2_preview.png" width="44" height="35" class="default" alt="">
-										<img src="./pic/object2_preview_active.png" width="50" height="39" class="active" alt="">
+										<img src="./pic/object6_preview.png" width="44" height="35" class="default" alt="">
+										<img src="./pic/object6_preview_active.png" width="50" height="40" class="active" alt="">
 									</div>
-									<p>Анатолия, 35а</p>
+									<p>Гоголя, 66</p>
 								</div>
 							</div>
 						</div>
 						<span class="next"></span>
 					</div>
 					<div class="object floor" id="building3">
-						<h1><span>Планировки 3</span></h1>
+						<h1><span>Кубанский, 19</span></h1>
+						<ul>
+							<li class="active"><a href="level1">1</a></li>
+							<li><a href="level2">2</a></li>
+						</ul>
+						<div class="level1">
+							<div id="building_3_1">
+								<img src="./cover/building_3_1.png" width="620" height="413" class="cover" alt="">
+								<div class="tooltip apartment1">
+									<p><span><em>Этаж</em></span> 7-10</p>
+									<p><span><em>Количество комнат</em></span> 2</p>
+									<p><span><em>Общая площадь</em></span> 100.52 м<sup>2</sup></p>
+									<p><span><em>Стоимость квартиры</em></span> 2 780 800<strong>p</strong></p>
+									<h6><a href="#">Интерьер</a></h6>
+								</div>
+							</div>
+						</div>
+						<div class="level2">
+							<div id="building_3_2">
+								<img src="./cover/building_3_2.png" width="620" height="413" class="cover" alt="">
+								<div class="tooltip apartment1">
+									<p><span><em>Этаж</em></span> 7-10</p>
+									<p><span><em>Количество комнат</em></span> 2</p>
+									<p><span><em>Общая площадь</em></span> 100.52 м<sup>2</sup></p>
+									<p><span><em>Стоимость квартиры</em></span> 2 780 800<strong>p</strong></p>
+									<h6><a href="#">Интерьер</a></h6>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 				<div class="clear"></div>
@@ -672,46 +715,56 @@
 								</div>
 								<div class="element" id="2">
 									<div>
+										<img src="./pic/object2_preview.png" width="44" height="35" class="default" alt="">
+										<img src="./pic/object2_preview_active.png" width="50" height="39" class="active" alt="">
+									</div>
+									<p>Анатолия, 35а</p>
+								</div>
+								<div class="element" id="3">
+									<div>
 										<img src="./pic/object3_preview.png" width="44" height="34" class="default" alt="">
 										<img src="./pic/object3_preview_active.png" width="50" height="40" class="active" alt="">
 									</div>
 									<p>Кубанский, 19</p>
 								</div>
-								<div class="element" id="3">
-									<div>
-										<img src="./pic/object5_preview.png" width="44" height="35" class="default" alt="">
-										<img src="./pic/object5_preview_active.png" width="50" height="39" class="active" alt="">
-									</div>
-									<p>Никитина, 40</p>
-								</div>
+								<h6>Завершенные</h6>
 								<div class="element" id="4">
-									<div>
-										<img src="./pic/object6_preview.png" width="44" height="35" class="default" alt="">
-										<img src="./pic/object6_preview_active.png" width="50" height="40" class="active" alt="">
-									</div>
-									<p>Гоголя, 66</p>
-								</div>
-								<div class="element" id="5">
 									<div>
 										<img src="./pic/object4_preview.png" width="44" height="35" class="default" alt="">
 										<img src="./pic/object4_preview_active.png" width="50" height="40" class="active" alt="">
 									</div>
 									<p>Короленко, 70</p>
 								</div>
-								<h6>Завершенные</h6>
+								<div class="element" id="5">
+									<div>
+										<img src="./pic/object5_preview.png" width="44" height="35" class="default" alt="">
+										<img src="./pic/object5_preview_active.png" width="50" height="39" class="active" alt="">
+									</div>
+									<p>Никитина, 40</p>
+								</div>
 								<div class="element" id="6">
 									<div>
-										<img src="./pic/object2_preview.png" width="44" height="35" class="default" alt="">
-										<img src="./pic/object2_preview_active.png" width="50" height="39" class="active" alt="">
+										<img src="./pic/object6_preview.png" width="44" height="35" class="default" alt="">
+										<img src="./pic/object6_preview_active.png" width="50" height="40" class="active" alt="">
 									</div>
-									<p>Анатолия, 35а</p>
+									<p>Гоголя, 66</p>
 								</div>
 							</div>
 						</div>
 						<span class="next"></span>
 					</div>
 					<div class="object floor" id="building4">
-						<h1><span>Планировки 4</span></h1>
+						<h1><span>Короленко, 70</span></h1>
+						<ul>
+							<li class="active"><a href="level1">2 - 6 этаж</a></li>
+							<li><a href="level2">7 - 10 этаж</a></li>
+							<li><a href="level3">11 - 15 этаж</a></li>
+							<li><a href="level4">16 - 17 этаж</a></li>
+							<li><a href="level5">18 - 20 этаж</a></li>
+							<li><a href="level6">21 этаж</a></li>
+							<li><a href="level7">22 этаж</a></li>
+							<li><a href="level8">23 этаж</a></li>
+						</ul>
 					</div>
 				</div>
 				<div class="clear"></div>
@@ -805,46 +858,74 @@
 								</div>
 								<div class="element" id="2">
 									<div>
+										<img src="./pic/object2_preview.png" width="44" height="35" class="default" alt="">
+										<img src="./pic/object2_preview_active.png" width="50" height="39" class="active" alt="">
+									</div>
+									<p>Анатолия, 35а</p>
+								</div>
+								<div class="element" id="3">
+									<div>
 										<img src="./pic/object3_preview.png" width="44" height="34" class="default" alt="">
 										<img src="./pic/object3_preview_active.png" width="50" height="40" class="active" alt="">
 									</div>
 									<p>Кубанский, 19</p>
 								</div>
-								<div class="element" id="3">
-									<div>
-										<img src="./pic/object5_preview.png" width="44" height="35" class="default" alt="">
-										<img src="./pic/object5_preview_active.png" width="50" height="39" class="active" alt="">
-									</div>
-									<p>Никитина, 40</p>
-								</div>
+								<h6>Завершенные</h6>
 								<div class="element" id="4">
-									<div>
-										<img src="./pic/object6_preview.png" width="44" height="35" class="default" alt="">
-										<img src="./pic/object6_preview_active.png" width="50" height="40" class="active" alt="">
-									</div>
-									<p>Гоголя, 66</p>
-								</div>
-								<div class="element" id="5">
 									<div>
 										<img src="./pic/object4_preview.png" width="44" height="35" class="default" alt="">
 										<img src="./pic/object4_preview_active.png" width="50" height="40" class="active" alt="">
 									</div>
 									<p>Короленко, 70</p>
 								</div>
-								<h6>Завершенные</h6>
+								<div class="element" id="5">
+									<div>
+										<img src="./pic/object5_preview.png" width="44" height="35" class="default" alt="">
+										<img src="./pic/object5_preview_active.png" width="50" height="39" class="active" alt="">
+									</div>
+									<p>Никитина, 40</p>
+								</div>
 								<div class="element" id="6">
 									<div>
-										<img src="./pic/object2_preview.png" width="44" height="35" class="default" alt="">
-										<img src="./pic/object2_preview_active.png" width="50" height="39" class="active" alt="">
+										<img src="./pic/object6_preview.png" width="44" height="35" class="default" alt="">
+										<img src="./pic/object6_preview_active.png" width="50" height="40" class="active" alt="">
 									</div>
-									<p>Анатолия, 35а</p>
+									<p>Гоголя, 66</p>
 								</div>
 							</div>
 						</div>
 						<span class="next"></span>
 					</div>
 					<div class="object floor" id="building5">
-						<h1><span>Планировки 5</span></h1>
+						<h1><span>Никитина, 40</span></h1>
+						<ul>
+							<li class="active"><a href="level1">1</a></li>
+							<li><a href="level2">2</a></li>
+						</ul>
+						<div class="level1">
+							<div id="building_5_1">
+								<img src="./cover/building_5_1.png" width="534" height="431" class="cover" alt="">
+								<div class="tooltip apartment1">
+									<p><span><em>Этаж</em></span> 7-10</p>
+									<p><span><em>Количество комнат</em></span> 3</p>
+									<p><span><em>Общая площадь</em></span> 100.52 м<sup>2</sup></p>
+									<p><span><em>Стоимость квартиры</em></span> 2 780 800<strong>p</strong></p>
+									<h6><a href="#">Интерьер</a></h6>
+								</div>
+							</div>
+						</div>
+						<div class="level2">
+							<div id="building_5_2">
+								<img src="./cover/building_5_2.png" width="534" height="431" class="cover" alt="">
+								<div class="tooltip apartment1">
+									<p><span><em>Этаж</em></span> 7-10</p>
+									<p><span><em>Количество комнат</em></span> 3</p>
+									<p><span><em>Общая площадь</em></span> 100.52 м<sup>2</sup></p>
+									<p><span><em>Стоимость квартиры</em></span> 2 780 800<strong>p</strong></p>
+									<h6><a href="#">Интерьер</a></h6>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 				<div class="clear"></div>
@@ -938,46 +1019,165 @@
 								</div>
 								<div class="element" id="2">
 									<div>
+										<img src="./pic/object2_preview.png" width="44" height="35" class="default" alt="">
+										<img src="./pic/object2_preview_active.png" width="50" height="39" class="active" alt="">
+									</div>
+									<p>Анатолия, 35а</p>
+								</div>
+								<div class="element" id="3">
+									<div>
 										<img src="./pic/object3_preview.png" width="44" height="34" class="default" alt="">
 										<img src="./pic/object3_preview_active.png" width="50" height="40" class="active" alt="">
 									</div>
 									<p>Кубанский, 19</p>
 								</div>
-								<div class="element" id="3">
-									<div>
-										<img src="./pic/object5_preview.png" width="44" height="35" class="default" alt="">
-										<img src="./pic/object5_preview_active.png" width="50" height="39" class="active" alt="">
-									</div>
-									<p>Никитина, 40</p>
-								</div>
+								<h6>Завершенные</h6>
 								<div class="element" id="4">
-									<div>
-										<img src="./pic/object6_preview.png" width="44" height="35" class="default" alt="">
-										<img src="./pic/object6_preview_active.png" width="50" height="40" class="active" alt="">
-									</div>
-									<p>Гоголя, 66</p>
-								</div>
-								<div class="element" id="5">
 									<div>
 										<img src="./pic/object4_preview.png" width="44" height="35" class="default" alt="">
 										<img src="./pic/object4_preview_active.png" width="50" height="40" class="active" alt="">
 									</div>
 									<p>Короленко, 70</p>
 								</div>
-								<h6>Завершенные</h6>
+								<div class="element" id="5">
+									<div>
+										<img src="./pic/object5_preview.png" width="44" height="35" class="default" alt="">
+										<img src="./pic/object5_preview_active.png" width="50" height="39" class="active" alt="">
+									</div>
+									<p>Никитина, 40</p>
+								</div>
 								<div class="element" id="6">
 									<div>
-										<img src="./pic/object2_preview.png" width="44" height="35" class="default" alt="">
-										<img src="./pic/object2_preview_active.png" width="50" height="39" class="active" alt="">
+										<img src="./pic/object6_preview.png" width="44" height="35" class="default" alt="">
+										<img src="./pic/object6_preview_active.png" width="50" height="40" class="active" alt="">
 									</div>
-									<p>Анатолия, 35а</p>
+									<p>Гоголя, 66</p>
 								</div>
 							</div>
 						</div>
 						<span class="next"></span>
 					</div>
 					<div class="object floor" id="building6">
-						<h1><span>Планировки 6</span></h1>
+						<h1><span>Гоголя 66</span></h1>
+						<ul>
+							<li class="active"><a href="level1">1</a></li>
+							<li><a href="level2">2</a></li>
+							<li><a href="level3">3</a></li>
+							<li><a href="level4">4</a></li>
+							<li><a href="level5">5</a></li>
+							<li><a href="level6">6</a></li>
+							<li><a href="level7">7</a></li>
+							<li><a href="level8">8</a></li>
+							<li><a href="level9">9</a></li>
+						</ul>
+						<div class="level1">
+							<div id="building_6_1">
+								<img src="./cover/building_6_1.png" width="534" height="413" class="cover" alt="">
+								<div class="tooltip apartment1">
+									<p><span><em>Этаж</em></span> 7-10</p>
+									<p><span><em>Количество комнат</em></span> 3</p>
+									<p><span><em>Общая площадь</em></span> 100.52 м<sup>2</sup></p>
+									<p><span><em>Стоимость квартиры</em></span> 2 780 800<strong>p</strong></p>
+									<h6><a href="#">Интерьер</a></h6>
+								</div>
+							</div>
+						</div>
+						<div class="level2">
+							<div id="building_6_2">
+								<img src="./cover/building_6_2.png" width="534" height="413" class="cover" alt="">
+								<div class="tooltip apartment1">
+									<p><span><em>Этаж</em></span> 7-10</p>
+									<p><span><em>Количество комнат</em></span> 3</p>
+									<p><span><em>Общая площадь</em></span> 100.52 м<sup>2</sup></p>
+									<p><span><em>Стоимость квартиры</em></span> 2 780 800<strong>p</strong></p>
+									<h6><a href="#">Интерьер</a></h6>
+								</div>
+							</div>
+						</div>
+						<div class="level3">
+							<div id="building_6_3">
+								<img src="./cover/building_6_3.png" width="534" height="413" class="cover" alt="">
+								<div class="tooltip apartment1">
+									<p><span><em>Этаж</em></span> 7-10</p>
+									<p><span><em>Количество комнат</em></span> 3</p>
+									<p><span><em>Общая площадь</em></span> 100.52 м<sup>2</sup></p>
+									<p><span><em>Стоимость квартиры</em></span> 2 780 800<strong>p</strong></p>
+									<h6><a href="#">Интерьер</a></h6>
+								</div>
+							</div>
+						</div>
+						<div class="level4">
+							<div id="building_6_4">
+								<img src="./cover/building_6_4.png" width="562" height="413" class="cover" alt="">
+								<div class="tooltip apartment1">
+									<p><span><em>Этаж</em></span> 7-10</p>
+									<p><span><em>Количество комнат</em></span> 3</p>
+									<p><span><em>Общая площадь</em></span> 100.52 м<sup>2</sup></p>
+									<p><span><em>Стоимость квартиры</em></span> 2 780 800<strong>p</strong></p>
+									<h6><a href="#">Интерьер</a></h6>
+								</div>
+							</div>
+						</div>
+						<div class="level5">
+							<div id="building_6_5">
+								<img src="./cover/building_6_5.png" width="553" height="413" class="cover" alt="">
+								<div class="tooltip apartment1">
+									<p><span><em>Этаж</em></span> 7-10</p>
+									<p><span><em>Количество комнат</em></span> 3</p>
+									<p><span><em>Общая площадь</em></span> 100.52 м<sup>2</sup></p>
+									<p><span><em>Стоимость квартиры</em></span> 2 780 800<strong>p</strong></p>
+									<h6><a href="#">Интерьер</a></h6>
+								</div>
+							</div>
+						</div>
+						<div class="level6">
+							<div id="building_6_6">
+								<img src="./cover/building_6_6.png" width="534" height="413" class="cover" alt="">
+								<div class="tooltip apartment1">
+									<p><span><em>Этаж</em></span> 7-10</p>
+									<p><span><em>Количество комнат</em></span> 3</p>
+									<p><span><em>Общая площадь</em></span> 100.52 м<sup>2</sup></p>
+									<p><span><em>Стоимость квартиры</em></span> 2 780 800<strong>p</strong></p>
+									<h6><a href="#">Интерьер</a></h6>
+								</div>
+							</div>
+						</div>
+						<div class="level7">
+							<div id="building_6_7">
+								<img src="./cover/building_6_7.png" width="534" height="413" class="cover" alt="">
+								<div class="tooltip apartment1">
+									<p><span><em>Этаж</em></span> 7-10</p>
+									<p><span><em>Количество комнат</em></span> 3</p>
+									<p><span><em>Общая площадь</em></span> 100.52 м<sup>2</sup></p>
+									<p><span><em>Стоимость квартиры</em></span> 2 780 800<strong>p</strong></p>
+									<h6><a href="#">Интерьер</a></h6>
+								</div>
+							</div>
+						</div>
+						<div class="level8">
+							<div id="building_6_8">
+								<img src="./cover/building_6_8.png" width="534" height="413" class="cover" alt="">
+								<div class="tooltip apartment1">
+									<p><span><em>Этаж</em></span> 7-10</p>
+									<p><span><em>Количество комнат</em></span> 3</p>
+									<p><span><em>Общая площадь</em></span> 100.52 м<sup>2</sup></p>
+									<p><span><em>Стоимость квартиры</em></span> 2 780 800<strong>p</strong></p>
+									<h6><a href="#">Интерьер</a></h6>
+								</div>
+							</div>
+						</div>
+						<div class="level9">
+							<div id="building_6_9">
+								<img src="./cover/building_6_9.png" width="534" height="413" class="cover" alt="">
+								<div class="tooltip apartment1">
+									<p><span><em>Этаж</em></span> 7-10</p>
+									<p><span><em>Количество комнат</em></span> 3</p>
+									<p><span><em>Общая площадь</em></span> 100.52 м<sup>2</sup></p>
+									<p><span><em>Стоимость квартиры</em></span> 2 780 800<strong>p</strong></p>
+									<h6><a href="#">Интерьер</a></h6>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 				<div class="clear"></div>
@@ -985,7 +1185,7 @@
 					<p class="copy">© 2014 Sibiria</p>
 					<p class="author">Разработано в <a href="http://letsrock.pro" target="_blank">Let’s Rock</a></p>
 				</div>
-				</div>
+			</div>
 		</section>
 	</div>
 </body>

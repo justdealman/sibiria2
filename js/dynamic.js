@@ -491,7 +491,7 @@ $(document).ready(function() {
 		}).filter(':first').click();
 	});
 	
-	$('.buildphoto > div a').fancybox();
+	$('.buildphoto > div > div > div a').fancybox();
 	
 	$('html').click(function() {
 		$('.modal').hide();
