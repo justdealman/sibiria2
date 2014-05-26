@@ -591,6 +591,20 @@ section {
 	padding:23px 0 23px;
 	margin:0 80px 40px 20px;
 }
+.index .nav h5 {
+	position:absolute;
+	left:31px;
+	top:-31px;
+	width:115px;
+	color:#235044;
+	font-size:14px;
+	line-height:17px;
+	font-weight:normal;
+	font-family:'Corbel', sans-serif;
+	text-align:center;
+	padding:0;
+	margin:0;
+}
 .index .nav > .prev, .index .nav > .next {
 	position:absolute;
 	left:77px;
