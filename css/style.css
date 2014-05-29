@@ -456,8 +456,8 @@ section {
 	line-height:14px;
 	font-family:'Boblic', sans-serif;
 	vertical-align:middle;
-	padding:0 0 0 45px;
-	margin:0 -3px 0 45px;
+	padding:0 0 0 21px;
+	margin:0 -3px 0 20px;
 	background:url('../img/menu_li.png') no-repeat left center;
 }
 .menu ul li:first-child {
@@ -509,7 +509,7 @@ section {
 .menu > div {
 	display:inline-block;
 	vertical-align:top;
-	margin:10px 0 0 40px;
+	margin:10px 0 0 20px;
 }
 .menu > div p {
 	display:inline-block;
@@ -518,14 +518,14 @@ section {
 	line-height:14px;
 	font-family:'Boblic', sans-serif;
 	vertical-align:top;
-	padding:0 24px 0 0;
-	margin:0 12px 0 0;
+	padding:0 26px 0 0;
+	margin:0 13px 0 0;
 	background:url('../img/menu_div_p.png') no-repeat right center;
 }
 .menu > div img {
 	display:inline-block;
 	vertical-align:middle;
-	margin:2px 0 0;
+	margin:-2px 0 0;
 }
 .menu > div > div {
 	display:inline-block;
@@ -1084,10 +1084,10 @@ section {
 }
 .index.buildings .object .modal {
 	position:absolute;
-	left:0;
-	top:7px;
+	left:-252px;
+	top:0;
 	z-index:200;
-	width:704px;
+	width:956px;
 	background:#ffffff;
 	border:2px dashed #235044;
 }
@@ -1973,6 +1973,26 @@ table.list td:nth-child(6), table.list th:nth-child(6) {
 	padding:0;
 	margin:0 0 34px;
 }
+.form h5 {
+	position:absolute;
+	right:44px;
+	bottom:54px;
+	width:240px;
+	font-size:14px;
+	line-height:17px;
+	font-weight:bold;
+	font-family:'Corbel', sans-serif;
+	padding:0 20px 0 0;
+	margin:0;
+}
+.form h5.success {
+	color:#43934e;
+	background:url('../img/form_h5_success.png') no-repeat right top;
+}
+.form h5.error {
+	color:#c52e31;
+	background:url('../img/form_h5_error.png') no-repeat right top;
+}
 .form p {
 	margin:0 0 16px;
 }
@@ -1994,12 +2014,14 @@ table.list td:nth-child(6), table.list th:nth-child(6) {
 	margin:0 0 -4px;
 }
 .form p input:focus, .form p textarea:focus {
-	border:2px solid #2c8db6;
+	border:2px solid #2b89af;
 }
 .form p input.success, .form p textarea.success {
+	background:#119a62;
 	border:2px solid #36836e;
 }
 .form p input.error, .form p textarea.error {
+	background:#c52e31;
 	border:2px solid #a14747;
 }
 .form button {

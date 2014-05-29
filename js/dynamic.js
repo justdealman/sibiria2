@@ -493,7 +493,7 @@ $(document).ready(function() {
 	
 	$('.buildphoto > div > div > div a').fancybox();
 	
-	$('html').click(function() {
+	$('section').click(function() {
 		$('.modal').hide();
 		$('body').off('wheel.modal mousewheel.modal');
 	});
