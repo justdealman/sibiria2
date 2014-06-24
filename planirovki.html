@@ -33,7 +33,6 @@
 			'./img/bg6.jpg'
 		]);
 		$(document).ready(function() {
-			$('body').css({'visibility': 'hidden'});
 			$('.main').onepage_scroll({
 			   sectionContainer: 'section',
 			   easing: 'ease',
@@ -48,7 +47,7 @@
 			});
 		});
 		$(window).load(function() {
-			$('body').css({'visibility': 'visible'});
+			$('.loading').hide();
 		});
 	</script>
 </head>
@@ -1324,5 +1323,6 @@
 			</div>
 		</section>
 	</div>
+	<div class="loading"><ul><li></li><li></li><li></li><li></li></ul></div>
 </body>
 </html>

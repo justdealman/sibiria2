@@ -593,7 +593,7 @@ $(document).ready(function() {
 			obj.hover(function(){
 				this.stop(true, true).animate({
 					fill: '#ffffff',
-					opacity: '0.4'
+					opacity: '0.75'
 				}, 250);
 				this.attr({'cursor':'pointer'});
 			}, function(){
