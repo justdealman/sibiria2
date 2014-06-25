@@ -2924,33 +2924,96 @@ table.list td:nth-child(6), table.list th:nth-child(6) {
 }
 .loading  > div > div {
 	position:absolute;
-	bottom:15px;
-	width:45px;
-	height:0;
-	background:url('../img/loading_div_div.png') repeat;
-}
-.loading  > div > div:nth-child(1) {
 	left:213px;
-	-moz-animation:loading 13s steps(13) infinite;
-	-webkit-animation:loading 13s steps(13) infinite;
-	animation:loading 13s steps(13) infinite;
-}
-.loading  > div > div:nth-child(2) {
-	left:265px;
-	-moz-animation:loading 13s steps(13) infinite;
-	-webkit-animation:loading 13s steps(13) infinite;
-	animation:loading 13s steps(13) infinite;
+	width:45px;
+	height:28px;
+	background:url('../img/loading_div_div.png') repeat;
+	-moz-animation:loading 10s infinite step-start;
+	-webkit-animation:loading 10s infinite step-start;
+	animation:loading 10s infinite step-start;
 }
 
 @-moz-keyframes loading {
-    from { height: 0; }
-    to { height: 380px; }
+    0 { left:233px; bottom:366px; }
+    4% { left:213px; bottom:16px; }
+    8% { left:265px; bottom:15px; }
+    12% { left:265px; bottom:46px; }
+    16% { left:213px; bottom:46px; }
+    20% { left:213px; bottom:75px; }
+    24% { left:265px; bottom:75px; }
+    28% { left:265px; bottom:105px; }
+    32% { left:213px; bottom:105px; }
+    36% { left:213px; bottom:134px; }
+    40% { left:265px; bottom:134px; }
+    44% { left:265px; bottom:163px; }
+    48% { left:213px; bottom:163px; }
+    52% { left:213px; bottom:193px; }
+    56% { left:265px; bottom:193px; }
+    60% { left:265px; bottom:222px; }
+    64% { left:213px; bottom:222px; }
+    68% { left:213px; bottom:252px; }
+    72% { left:265px; bottom:252px; }
+    76% { left:265px; bottom:281px; }
+    80% { left:213px; bottom:281px; }
+    84% { left:213px; bottom:305px; }
+    88% { left:265px; bottom:305px; }
+    92% { left:265px; bottom:340px; }
+    96% { left:213px; bottom:340px; }
+    100% { left:233px; bottom:366px; }
 }
 @-webkit-keyframes loading {
-    from { height: 0; }
-    to { height: 380px; }
+    0 { left:233px; bottom:366px; }
+    4% { left:213px; bottom:16px; }
+    8% { left:265px; bottom:15px; }
+    12% { left:265px; bottom:46px; }
+    16% { left:213px; bottom:46px; }
+    20% { left:213px; bottom:75px; }
+    24% { left:265px; bottom:75px; }
+    28% { left:265px; bottom:105px; }
+    32% { left:213px; bottom:105px; }
+    36% { left:213px; bottom:134px; }
+    40% { left:265px; bottom:134px; }
+    44% { left:265px; bottom:163px; }
+    48% { left:213px; bottom:163px; }
+    52% { left:213px; bottom:193px; }
+    56% { left:265px; bottom:193px; }
+    60% { left:265px; bottom:222px; }
+    64% { left:213px; bottom:222px; }
+    68% { left:213px; bottom:252px; }
+    72% { left:265px; bottom:252px; }
+    76% { left:265px; bottom:281px; }
+    80% { left:213px; bottom:281px; }
+    84% { left:213px; bottom:305px; }
+    88% { left:265px; bottom:305px; }
+    92% { left:265px; bottom:340px; }
+    96% { left:213px; bottom:340px; }
+    100% { left:233px; bottom:366px; }
 }
 @keyframes loading {
-    from { height: 0; }
-    to { height: 380px; }
+    0 { left:233px; bottom:366px; }
+    4% { left:213px; bottom:16px; }
+    8% { left:265px; bottom:15px; }
+    12% { left:265px; bottom:46px; }
+    16% { left:213px; bottom:46px; }
+    20% { left:213px; bottom:75px; }
+    24% { left:265px; bottom:75px; }
+    28% { left:265px; bottom:105px; }
+    32% { left:213px; bottom:105px; }
+    36% { left:213px; bottom:134px; }
+    40% { left:265px; bottom:134px; }
+    44% { left:265px; bottom:163px; }
+    48% { left:213px; bottom:163px; }
+    52% { left:213px; bottom:193px; }
+    56% { left:265px; bottom:193px; }
+    60% { left:265px; bottom:222px; }
+    64% { left:213px; bottom:222px; }
+    68% { left:213px; bottom:252px; }
+    72% { left:265px; bottom:252px; }
+    76% { left:265px; bottom:281px; }
+    80% { left:213px; bottom:281px; }
+    84% { left:213px; bottom:305px; }
+    88% { left:265px; bottom:305px; }
+    92% { left:265px; bottom:340px; }
+    96% { left:213px; bottom:340px; }
+    100% { left:233px; bottom:366px; }
 }
