@@ -145,7 +145,7 @@ button::-moz-focus-inner {
 	margin:0 auto;
 	overflow-x:hidden;
 }
-section {
+div.section {
 	-webkit-background-size:cover !important;
 	-moz-background-size:cover !important;
 	-o-background-size:cover !important;
@@ -691,22 +691,22 @@ section {
 .index .nav > div > div .element.active div {
 	background:none;
 }
-.index .nav > div > div .element:nth-of-type(1).active div {
+.index .nav > div > div .element.style1.active div {
 	border:3px solid #0ea6bc;
 }
-.index .nav > div > div .element:nth-of-type(2).active div {
+.index .nav > div > div .element.style2.active div {
 	border:3px solid #8eb84c;
 }
-.index .nav > div > div .element:nth-of-type(3).active div {
+.index .nav > div > div .element.style3.active div {
 	border:3px solid #69b870;
 }
-.index .nav > div > div .element:nth-of-type(4).active div {
+.index .nav > div > div .element.style4.active div {
 	border:3px solid #519d89;
 }
-.index .nav > div > div .element:nth-of-type(5).active div {
+.index .nav > div > div .element.style5.active div {
 	border:3px solid #378596;
 }
-.index .nav > div > div .element:nth-of-type(6).active div {
+.index .nav > div > div .element.style6.active div {
 	border:3px solid #0975a8;
 }
 .index .nav > div > div .element div:after {
@@ -1024,7 +1024,6 @@ section {
 	-webkit-box-shadow:5px 5px 10px rgba(0,0,0,0.25);
 	-moz-box-shadow:5px 5px 10px rgba(0,0,0,0.25);
 	box-shadow:5px 5px 10px rgba(0,0,0,0.25);
-	behavior:url('./pie.htc');
 	transition:all 0.25s ease-in-out;
 	-webkit-transition:all 0.25s ease-in-out;
 	-moz-transition:all 0.25s ease-in-out;
@@ -1067,6 +1066,7 @@ section {
 	height:100%;
 	background:#ffffff;
 	opacity:0.35;
+	filter:alpha(opacity=35);
 	transition:all 0.25s ease-in-out;
 	-webkit-transition:all 0.25s ease-in-out;
 	-moz-transition:all 0.25s ease-in-out;

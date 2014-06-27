@@ -20,7 +20,7 @@ body, .main, html {
 	padding:0;
 	-webkit-transform-style:preserve-3d;
 }
-.main section {
+.main .section {
 	overflow:hidden;
 	width:100%;
 	height:100%;

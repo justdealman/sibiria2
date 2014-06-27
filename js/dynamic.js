@@ -92,11 +92,11 @@ function zoom() {
 			$('.index .object .gallery').css({'zoom': '1.2', 'margin': '4px 60px 0 -20px'});
 		}
 	}
-	$('section .wrapper').css({'zoom': zoom});
+	$('div.section .wrapper').css({'zoom': zoom});
 	
 	modalheight = Math.floor(($('.index').height()-20)*zoom);
 	
-	$('section').each(function() {
+	$('div.section').each(function() {
 
 		$(this).find('.index .nav > div').height(scrollobjectheight);
 		var scrollobjectpreview = $(this).find('.index .nav > div').jScrollPane({
@@ -149,15 +149,10 @@ $(window).load(function() {
 	zoom();
 });
 $(document).ready(function() {
-	$('.index.buildings .nav .element').bind('click', function() {
-		var target = $(this).attr('id');
-		$('.main').moveTo(target);
-		return false;
-	});
 	
 	$('.object .gallery > div').each(function() {
-		var objectheight = $('.object .gallery > div').height() - $(this).find('.navigation').position().top;
-		$(this).find('.pictures img').css({'bottom': objectheight+'px'});
+		var objectheight = $(this).find('.navigation').height();
+		$(this).find('.pictures img').css({'top': objectheight+'px'});
 		$(this).find('.pictures img:first-child').show();
 		$(this).find('.prev').addClass('disabled');
 	});
@@ -190,12 +185,9 @@ $(document).ready(function() {
 		return false;
 	});
 	if ( $('.index.buildings').length || $('.index.floors').length ) {
-		var xxx = 1;
-		var first = 1;
-		
-		$('section .index.buildings .nav').each(function() {
-			var ind = $(this).parents('section').index()+1;
-			$(this).find('.element:nth-of-type('+ind+')').addClass('active');
+		$('div.section .index.buildings .nav').each(function() {
+			var ind = $(this).parents('div.section').index()+1;
+			$(this).find('.element#'+ind).addClass('active');
 		});	
 	}
 	
@@ -493,7 +485,7 @@ $(document).ready(function() {
 	
 	$('.buildphoto > div > div > div a').fancybox();
 	
-	$('section').click(function() {
+	$('div.section').click(function() {
 		$('.modal').hide();
 		$('body').off('wheel.modal mousewheel.modal');
 	});
@@ -615,5 +607,5 @@ $(document).ready(function() {
 				return false;
 			});
 		}
-	});	
+	});
 });

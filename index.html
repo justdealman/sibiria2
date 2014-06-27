@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html>
+<!--[if lt IE 9]><html lang="en-us" class="no-js"><![endif]-->
 <head>
 	<title>Сибирия</title>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -30,20 +31,33 @@
 			'./img/bg4.jpg',
 			'./img/bg5.jpg',
 			'./img/bg6.jpg'
-		]);
+		]);	
 		$(document).ready(function() {
-			$('.main').onepage_scroll({
-			   sectionContainer: 'section',
-			   easing: 'ease',
-			   animationTime: 1000,
-			   pagination: false,
-			   updateURL: true,
-			   beforeMove: function(index) {},
-			   afterMove: function(index) {},
-			   loop: false,
-			   keyboard: true,
-			   responsiveFallback: false
-			});
+			if ( $('#ie').length > 0 ) {
+				$('div.section .index .nav .element').click(function () {
+					$('.main').stop(true,true).animate({'margin-top': -($(this).attr('id')-1)*$(window).height()+'px'}, 500);
+					return false;
+				}).filter(':first').click();
+			}
+			else {
+				$('.main').onepage_scroll({
+				   sectionContainer: 'div.section',
+				   easing: 'ease',
+				   animationTime: 1000,
+				   pagination: false,
+				   updateURL: true,
+				   beforeMove: function(index) {},
+				   afterMove: function(index) {},
+				   loop: false,
+				   keyboard: true,
+				   responsiveFallback: false
+				});
+				$('.index.buildings .nav .element').bind('click', function() {
+					var target = $(this).attr('id');
+					$('.main').moveTo(target);
+					return false;
+				});
+			}
 		});
 		$(window).load(function() {
 			$('.loading').hide();
@@ -52,7 +66,7 @@
 </head>
 <body>
 	<div class="main">
-		<section class="b1">
+		<div class="section b1">
 			<div class="wrapper">
 				<div class="panel">
 					<div>
@@ -129,21 +143,21 @@
 						<div>
 							<div>
 								<h6>Строящиеся</h6>
-								<div class="element" id="1">
+								<div class="element style1" id="1">
 									<div>
 										<img src="./pic/object1_preview.png" width="44" height="40" class="default" alt="">
 										<img src="./pic/object1_preview_active.png" width="50" height="46" class="active" alt="">
 									</div>
 									<p>ЖК “Аквамарин”</p>
 								</div>
-								<div class="element" id="2">
+								<div class="element style2" id="2">
 									<div>
 										<img src="./pic/object2_preview.png" width="44" height="35" class="default" alt="">
 										<img src="./pic/object2_preview_active.png" width="50" height="39" class="active" alt="">
 									</div>
 									<p>Анатолия, 35а</p>
 								</div>
-								<div class="element" id="3">
+								<div class="element style3" id="3">
 									<div>
 										<img src="./pic/object3_preview.png" width="44" height="34" class="default" alt="">
 										<img src="./pic/object3_preview_active.png" width="50" height="40" class="active" alt="">
@@ -151,21 +165,21 @@
 									<p>Кубанский, 19</p>
 								</div>
 								<h6>Завершенные</h6>
-								<div class="element" id="4">
+								<div class="element style4" id="4">
 									<div>
 										<img src="./pic/object4_preview.png" width="44" height="35" class="default" alt="">
 										<img src="./pic/object4_preview_active.png" width="50" height="40" class="active" alt="">
 									</div>
 									<p>Короленко, 70</p>
 								</div>
-								<div class="element" id="5">
+								<div class="element style5" id="5">
 									<div>
 										<img src="./pic/object5_preview.png" width="44" height="35" class="default" alt="">
 										<img src="./pic/object5_preview_active.png" width="50" height="39" class="active" alt="">
 									</div>
 									<p>Никитина, 40</p>
 								</div>
-								<div class="element" id="6">
+								<div class="element style6" id="6">
 									<div>
 										<img src="./pic/object6_preview.png" width="44" height="35" class="default" alt="">
 										<img src="./pic/object6_preview_active.png" width="50" height="40" class="active" alt="">
@@ -329,8 +343,8 @@
 					<p class="author">Разработано в <a href="http://letsrock.pro" target="_blank">Let’s Rock</a></p>
 				</div>
 			</div>
-		</section>
-		<section class="b2">
+		</div>
+		<div class="section b2">
 			<div class="wrapper">
 				<div class="panel">
 					<div>
@@ -405,21 +419,21 @@
 						<div>
 							<div>
 								<h6>Строящиеся</h6>
-								<div class="element" id="1">
+								<div class="element style1" id="1">
 									<div>
 										<img src="./pic/object1_preview.png" width="44" height="40" class="default" alt="">
 										<img src="./pic/object1_preview_active.png" width="50" height="46" class="active" alt="">
 									</div>
 									<p>ЖК “Аквамарин”</p>
 								</div>
-								<div class="element" id="2">
+								<div class="element style2" id="2">
 									<div>
 										<img src="./pic/object2_preview.png" width="44" height="35" class="default" alt="">
 										<img src="./pic/object2_preview_active.png" width="50" height="39" class="active" alt="">
 									</div>
 									<p>Анатолия, 35а</p>
 								</div>
-								<div class="element" id="3">
+								<div class="element style3" id="3">
 									<div>
 										<img src="./pic/object3_preview.png" width="44" height="34" class="default" alt="">
 										<img src="./pic/object3_preview_active.png" width="50" height="40" class="active" alt="">
@@ -427,21 +441,21 @@
 									<p>Кубанский, 19</p>
 								</div>
 								<h6>Завершенные</h6>
-								<div class="element" id="4">
+								<div class="element style4" id="4">
 									<div>
 										<img src="./pic/object4_preview.png" width="44" height="35" class="default" alt="">
 										<img src="./pic/object4_preview_active.png" width="50" height="40" class="active" alt="">
 									</div>
 									<p>Короленко, 70</p>
 								</div>
-								<div class="element" id="5">
+								<div class="element style5" id="5">
 									<div>
 										<img src="./pic/object5_preview.png" width="44" height="35" class="default" alt="">
 										<img src="./pic/object5_preview_active.png" width="50" height="39" class="active" alt="">
 									</div>
 									<p>Никитина, 40</p>
 								</div>
-								<div class="element" id="6">
+								<div class="element style6" id="6">
 									<div>
 										<img src="./pic/object6_preview.png" width="44" height="35" class="default" alt="">
 										<img src="./pic/object6_preview_active.png" width="50" height="40" class="active" alt="">
@@ -519,8 +533,8 @@
 					<p class="author">Разработано в <a href="http://letsrock.pro" target="_blank">Let’s Rock</a></p>
 				</div>
 				</div>
-		</section>
-		<section class="b3">
+		</div>
+		<div class="section b3">
 			<div class="wrapper">
 				<div class="panel">
 					<div>
@@ -595,21 +609,21 @@
 						<div>
 							<div>
 								<h6>Строящиеся</h6>
-								<div class="element" id="1">
+								<div class="element style1" id="1">
 									<div>
 										<img src="./pic/object1_preview.png" width="44" height="40" class="default" alt="">
 										<img src="./pic/object1_preview_active.png" width="50" height="46" class="active" alt="">
 									</div>
 									<p>ЖК “Аквамарин”</p>
 								</div>
-								<div class="element" id="2">
+								<div class="element style2" id="2">
 									<div>
 										<img src="./pic/object2_preview.png" width="44" height="35" class="default" alt="">
 										<img src="./pic/object2_preview_active.png" width="50" height="39" class="active" alt="">
 									</div>
 									<p>Анатолия, 35а</p>
 								</div>
-								<div class="element" id="3">
+								<div class="element style3" id="3">
 									<div>
 										<img src="./pic/object3_preview.png" width="44" height="34" class="default" alt="">
 										<img src="./pic/object3_preview_active.png" width="50" height="40" class="active" alt="">
@@ -617,21 +631,21 @@
 									<p>Кубанский, 19</p>
 								</div>
 								<h6>Завершенные</h6>
-								<div class="element" id="4">
+								<div class="element style4" id="4">
 									<div>
 										<img src="./pic/object4_preview.png" width="44" height="35" class="default" alt="">
 										<img src="./pic/object4_preview_active.png" width="50" height="40" class="active" alt="">
 									</div>
 									<p>Короленко, 70</p>
 								</div>
-								<div class="element" id="5">
+								<div class="element style5" id="5">
 									<div>
 										<img src="./pic/object5_preview.png" width="44" height="35" class="default" alt="">
 										<img src="./pic/object5_preview_active.png" width="50" height="39" class="active" alt="">
 									</div>
 									<p>Никитина, 40</p>
 								</div>
-								<div class="element" id="6">
+								<div class="element style6" id="6">
 									<div>
 										<img src="./pic/object6_preview.png" width="44" height="35" class="default" alt="">
 										<img src="./pic/object6_preview_active.png" width="50" height="40" class="active" alt="">
@@ -709,8 +723,8 @@
 					<p class="author">Разработано в <a href="http://letsrock.pro" target="_blank">Let’s Rock</a></p>
 				</div>
 			</div>
-		</section>
-		<section class="b4">
+		</div>
+		<div class="section b4">
 			<div class="wrapper">
 				<div class="panel">
 					<div>
@@ -785,21 +799,21 @@
 						<div>
 							<div>
 								<h6>Строящиеся</h6>
-								<div class="element" id="1">
+								<div class="element style1" id="1">
 									<div>
 										<img src="./pic/object1_preview.png" width="44" height="40" class="default" alt="">
 										<img src="./pic/object1_preview_active.png" width="50" height="46" class="active" alt="">
 									</div>
 									<p>ЖК “Аквамарин”</p>
 								</div>
-								<div class="element" id="2">
+								<div class="element style2" id="2">
 									<div>
 										<img src="./pic/object2_preview.png" width="44" height="35" class="default" alt="">
 										<img src="./pic/object2_preview_active.png" width="50" height="39" class="active" alt="">
 									</div>
 									<p>Анатолия, 35а</p>
 								</div>
-								<div class="element" id="3">
+								<div class="element style3" id="3">
 									<div>
 										<img src="./pic/object3_preview.png" width="44" height="34" class="default" alt="">
 										<img src="./pic/object3_preview_active.png" width="50" height="40" class="active" alt="">
@@ -807,21 +821,21 @@
 									<p>Кубанский, 19</p>
 								</div>
 								<h6>Завершенные</h6>
-								<div class="element" id="4">
+								<div class="element style4" id="4">
 									<div>
 										<img src="./pic/object4_preview.png" width="44" height="35" class="default" alt="">
 										<img src="./pic/object4_preview_active.png" width="50" height="40" class="active" alt="">
 									</div>
 									<p>Короленко, 70</p>
 								</div>
-								<div class="element" id="5">
+								<div class="element style5" id="5">
 									<div>
 										<img src="./pic/object5_preview.png" width="44" height="35" class="default" alt="">
 										<img src="./pic/object5_preview_active.png" width="50" height="39" class="active" alt="">
 									</div>
 									<p>Никитина, 40</p>
 								</div>
-								<div class="element" id="6">
+								<div class="element style6" id="6">
 									<div>
 										<img src="./pic/object6_preview.png" width="44" height="35" class="default" alt="">
 										<img src="./pic/object6_preview_active.png" width="50" height="40" class="active" alt="">
@@ -899,8 +913,8 @@
 					<p class="author">Разработано в <a href="http://letsrock.pro" target="_blank">Let’s Rock</a></p>
 				</div>
 			</div>
-		</section>
-		<section class="b5">
+		</div>
+		<div class="section b5">
 			<div class="wrapper">
 				<div class="panel">
 					<div>
@@ -975,21 +989,21 @@
 						<div>
 							<div>
 								<h6>Строящиеся</h6>
-								<div class="element" id="1">
+								<div class="element style1" id="1">
 									<div>
 										<img src="./pic/object1_preview.png" width="44" height="40" class="default" alt="">
 										<img src="./pic/object1_preview_active.png" width="50" height="46" class="active" alt="">
 									</div>
 									<p>ЖК “Аквамарин”</p>
 								</div>
-								<div class="element" id="2">
+								<div class="element style2" id="2">
 									<div>
 										<img src="./pic/object2_preview.png" width="44" height="35" class="default" alt="">
 										<img src="./pic/object2_preview_active.png" width="50" height="39" class="active" alt="">
 									</div>
 									<p>Анатолия, 35а</p>
 								</div>
-								<div class="element" id="3">
+								<div class="element style3" id="3">
 									<div>
 										<img src="./pic/object3_preview.png" width="44" height="34" class="default" alt="">
 										<img src="./pic/object3_preview_active.png" width="50" height="40" class="active" alt="">
@@ -997,21 +1011,21 @@
 									<p>Кубанский, 19</p>
 								</div>
 								<h6>Завершенные</h6>
-								<div class="element" id="4">
+								<div class="element style4" id="4">
 									<div>
 										<img src="./pic/object4_preview.png" width="44" height="35" class="default" alt="">
 										<img src="./pic/object4_preview_active.png" width="50" height="40" class="active" alt="">
 									</div>
 									<p>Короленко, 70</p>
 								</div>
-								<div class="element" id="5">
+								<div class="element style5" id="5">
 									<div>
 										<img src="./pic/object5_preview.png" width="44" height="35" class="default" alt="">
 										<img src="./pic/object5_preview_active.png" width="50" height="39" class="active" alt="">
 									</div>
 									<p>Никитина, 40</p>
 								</div>
-								<div class="element" id="6">
+								<div class="element style6" id="6">
 									<div>
 										<img src="./pic/object6_preview.png" width="44" height="35" class="default" alt="">
 										<img src="./pic/object6_preview_active.png" width="50" height="40" class="active" alt="">
@@ -1089,8 +1103,8 @@
 					<p class="author">Разработано в <a href="http://letsrock.pro" target="_blank">Let’s Rock</a></p>
 				</div>
 			</div>
-		</section>
-		<section class="b6">
+		</div>
+		<div class="section b6">
 			<div class="wrapper">
 				<div class="panel">
 					<div>
@@ -1165,21 +1179,21 @@
 						<div>
 							<div>
 								<h6>Строящиеся</h6>
-								<div class="element" id="1">
+								<div class="element style1" id="1">
 									<div>
 										<img src="./pic/object1_preview.png" width="44" height="40" class="default" alt="">
 										<img src="./pic/object1_preview_active.png" width="50" height="46" class="active" alt="">
 									</div>
 									<p>ЖК “Аквамарин”</p>
 								</div>
-								<div class="element" id="2">
+								<div class="element style2" id="2">
 									<div>
 										<img src="./pic/object2_preview.png" width="44" height="35" class="default" alt="">
 										<img src="./pic/object2_preview_active.png" width="50" height="39" class="active" alt="">
 									</div>
 									<p>Анатолия, 35а</p>
 								</div>
-								<div class="element" id="3">
+								<div class="element style3" id="3">
 									<div>
 										<img src="./pic/object3_preview.png" width="44" height="34" class="default" alt="">
 										<img src="./pic/object3_preview_active.png" width="50" height="40" class="active" alt="">
@@ -1187,21 +1201,21 @@
 									<p>Кубанский, 19</p>
 								</div>
 								<h6>Завершенные</h6>
-								<div class="element" id="4">
+								<div class="element style4" id="4">
 									<div>
 										<img src="./pic/object4_preview.png" width="44" height="35" class="default" alt="">
 										<img src="./pic/object4_preview_active.png" width="50" height="40" class="active" alt="">
 									</div>
 									<p>Короленко, 70</p>
 								</div>
-								<div class="element" id="5">
+								<div class="element style5" id="5">
 									<div>
 										<img src="./pic/object5_preview.png" width="44" height="35" class="default" alt="">
 										<img src="./pic/object5_preview_active.png" width="50" height="39" class="active" alt="">
 									</div>
 									<p>Никитина, 40</p>
 								</div>
-								<div class="element" id="6">
+								<div class="element style6" id="6">
 									<div>
 										<img src="./pic/object6_preview.png" width="44" height="35" class="default" alt="">
 										<img src="./pic/object6_preview_active.png" width="50" height="40" class="active" alt="">
@@ -1279,10 +1293,11 @@
 					<p class="author">Разработано в <a href="http://letsrock.pro" target="_blank">Let’s Rock</a></p>
 				</div>
 			</div>
-		</section>
+		</div>
 	</div>
 	<div class="fade"></div>
 	<div class="loading"><div><div></div></div></div>
+	<!--[if lte IE 9]><input type="hidden" id="ie">< ![endif]-->
 	<!--<div class="bg bg1"></div>
 	<div class="bg bg2"></div>
 	<div class="bg bg3"></div>
