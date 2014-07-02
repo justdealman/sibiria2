@@ -151,8 +151,8 @@ $(window).load(function() {
 $(document).ready(function() {
 	
 	$('.object .gallery > div').each(function() {
-		var objectheight = $(this).find('.navigation').height();
-		$(this).find('.pictures img').css({'top': objectheight+'px'});
+		var objectheight = $(this).find('.navigation').outerHeight();
+ 		$(this).find('.pictures img').css({'bottom': objectheight+'px'});
 		$(this).find('.pictures img:first-child').show();
 		$(this).find('.prev').addClass('disabled');
 	});
