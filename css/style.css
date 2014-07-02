@@ -1636,7 +1636,7 @@ div.section {
 	top:0;
 	z-index:10;
 	width:960px;
-	margin:0 0 0 -480px;
+	margin:-64px 0 0 -480px;
 }
 .filter h1 {
 	font-size:30px;
@@ -1771,6 +1771,9 @@ div.section {
 }
 .filter.active p.less {
 	display:block;
+}
+.filter.fixed p.less, .filter.fixed p.more, .filter.fixed .methods {
+	display:none;
 }
 table.list {
 	width:100%;
