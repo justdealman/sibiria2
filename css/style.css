@@ -183,6 +183,9 @@ div.section {
 .b10 {
 	background:url('../img/bg10.jpg') no-repeat center center;
 }
+.b8 {
+	background:url('../img/bg8.jpg') no-repeat center center;
+}
 
 /* Header */
 
@@ -709,6 +712,9 @@ div.section {
 .index .nav > div > div .element.style6.active div {
 	border:3px solid #0975a8;
 }
+.index .nav > div > div .element.style8.active div {
+	border:3px solid #edbf19;
+}
 .index .nav > div > div .element div:after {
 	display:none;
 	content:"";
@@ -793,7 +799,7 @@ div.section {
 	position:absolute;
 	left:0;
 	bottom:0;
-	width:308px;
+	width:307px;
 	padding:13px 0 11px;
 	background:url('../img/object_gallery_div_div.png') repeat;
 	-webkit-border-radius:0 0 13px 7px;
@@ -869,6 +875,9 @@ div.section {
 }
 .index .object#building6 .gallery {
 	background:url('../img/object6_cover.png') no-repeat left top;
+}
+.index .object#building8 .gallery {
+	background:url('../img/object8_cover.png') no-repeat left top;
 }
 .index .object .information {
 	display:inline-block;
@@ -968,6 +977,15 @@ div.section {
 .index .object#building6 .information h6:after {
 	border-top:40px solid #0975a8;
 }
+.index .object#building8 .information h6 {
+	background:#edb800;
+}
+.index .object#building8 .information h6:before {
+	border-bottom:40px solid #edb800;
+}
+.index .object#building8 .information h6:after {
+	border-top:40px solid #edb800;
+}
 .index .object .information p {
 	font-size:16px;
 	line-height:18px;
@@ -1052,6 +1070,9 @@ div.section {
 }
 .index .object#building6 .information button {
 	border:5px solid #0975a8;
+}
+.index .object#building8 .information button {
+	border:5px solid #edb800;
 }
 .index .object .information button span {
 	position:relative;
